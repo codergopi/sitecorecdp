@@ -1,0 +1,29 @@
+﻿---
+ID: "fe548283-f185-470b-8447-7c8a1fc4d67f"
+Parent: "2fcdc739-f535-40cb-af2b-c7edd0b0ddc5"
+Template: "2fcdc739-f535-40cb-af2b-c7edd0b0ddc5"
+Path: /sitecore/templates/Project/sitecorecdp/codepage/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {2FCDC739-F535-40CB-AF2B-C7EDD0B0DDC5}
+    {4EEE653B-2D07-439E-8358-1DA97C3895CB}
+    {21A67B50-25E1-4E6B-B2DB-C82BFE7A04BD}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220802T082436Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a0a4d9b7-2798-4f5c-93a8-bd661b2c1d01"
+      Hint: CodeDescTitle
+      Value: $name

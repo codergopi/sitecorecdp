@@ -1,0 +1,17 @@
+﻿---
+ID: "cdbd5a6f-b2ec-44d6-9a46-3bcd2db0fab1"
+Parent: "304fe839-2b3c-47b6-99f2-ddbf8181e487"
+Template: "2fcdc739-f535-40cb-af2b-c7edd0b0ddc5"
+Path: "/sitecore/content/sitecorecdp/home/firstpage/codepage-1"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220802T082741Z
+    - ID: "a0a4d9b7-2798-4f5c-93a8-bd661b2c1d01"
+      Hint: CodeDescTitle
+      Value: "codepage-1"

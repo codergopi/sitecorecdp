@@ -1,0 +1,18 @@
+﻿---
+ID: "f8096f74-f536-43e8-83c4-91f422bdac3f"
+Parent: "73baf23f-f824-43c5-87e5-75a52d3e724a"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/Renderings/Project/sitecorecdp/homehero
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220802T083057Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
