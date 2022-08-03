@@ -269,10 +269,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CodeContentController.cs" />
+    <Compile Include="Controllers\HomeHeroController.cs" />
+    <Compile Include="Controllers\TabContentController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Views\HomeHero\Index.cshtml" />
+    <Content Include="Views\CodeContent\Index.cshtml" />
+    <Content Include="Views\TabContent\Index.cshtml" />
     <None Include="Views\web.config" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
@@ -284,7 +290,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

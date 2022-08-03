@@ -272,6 +272,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\SitecoreCdp\SitecoreCDP.Project.Website.SiteDefinition.config" />
     <None Include="packages.config" />
     <None Include="Views\web.config" />
     <Content Include="Views\_maincdplayout.cshtml" />

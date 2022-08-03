@@ -12,6 +12,20 @@ SharedFields:
     {2FCDC739-F535-40CB-AF2B-C7EDD0B0DDC5}
     {4EEE653B-2D07-439E-8358-1DA97C3895CB}
     {21A67B50-25E1-4E6B-B2DB-C82BFE7A04BD}
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{FBEE9FC8-9CD8-42EC-B04B-6C7A17B574C6}">
+        <r
+          id="{1C626537-5F75-4A2B-8300-E9AA568F5253}"
+          ph="cdp-main"
+          uid="{DD5CB57C-42D0-4D78-BC50-67C65EA7EB44}" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
