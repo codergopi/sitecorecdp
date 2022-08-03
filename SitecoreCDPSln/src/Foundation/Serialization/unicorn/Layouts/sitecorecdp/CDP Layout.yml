@@ -4,6 +4,11 @@ Parent: "ad437887-9cbf-4653-9438-7920cb7a7a43"
 Template: "3a45a723-64ee-4919-9d41-02fd40fd1466"
 Path: /sitecore/layout/Layouts/Project/sitecorecdp/CDP Layout
 DB: master
+SharedFields:
+- ID: "a036b2bc-ba04-44f6-a75f-bae6cd242abf"
+  Hint: Path
+  Value: |
+    ~\Views\_maincdplayout.cshtml
 Languages:
 - Language: en
   Versions:

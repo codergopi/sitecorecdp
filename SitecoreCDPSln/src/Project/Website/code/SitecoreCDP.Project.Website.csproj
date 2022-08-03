@@ -274,6 +274,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Views\web.config" />
+    <Content Include="Views\_maincdplayout.cshtml" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
