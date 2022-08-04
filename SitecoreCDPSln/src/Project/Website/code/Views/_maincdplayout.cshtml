@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width" />
     <title>Sitecore CDP Training</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Custom.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/owl.theme.default.min.css" rel="stylesheet" />
     <script type="text/javascript">
         // Define the Boxever queue
         var _boxeverq = _boxeverq || [];
@@ -37,8 +41,12 @@
     <div>
         @Html.Sitecore().Placeholder("cdp-main")
     </div>
-    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    <script src="~/Scripts/jquery.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery.stellar.min.js"></script>
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/smoothscroll.js"></script>
+    <script src="~/Scripts/custom.js"></script>
     <script type="text/javascript">
 
         //==================== Session =============================
@@ -59,9 +67,39 @@
         });
 
         function sendDefaultIdentity() {
-            var fName = "Arvind";
-            var lName = "Gehlot";
-            var email = "arv1@geh1.com";
+            /*
+             * https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-0/send-an-identity-event-to-sitecore-cdp.html
+             * */
+            var fName = "Gopi";
+            var lName = "S V";
+            var email = "gopi@gmail.com";
+
+            var eventToSendRevised = {
+                "channel": "WEB",
+                "type": "IDENTITY",
+                "language": "EN",
+                "currency": "EUR",
+                "page": "test",
+                "pos": "BootCamp_MVC_CDP",
+                "browser_id": Boxever.getID(),
+                "email": "gopi@gmail.com",
+                "title": "Mr",
+                "firstname": "Gopi",
+                "lastname": "S V",
+                "gender": "male",
+                "dob": "1980-01-23T00:00",
+                "passport_no": "IR123456",
+                "mobile": "+3531234567",
+                "phone": "+353123456",
+                "street": ["41 Viridian Square", "Walton Street", "Aylesbury"],
+                "city": "Aylesbury",
+                "country": "UK",
+                "postal_code": "HP217FX",
+                "identifiers": [{
+                    "provider": "BXLP",
+                    "id": "123456"
+                }]
+            }
 
             var eventToSend = {
                 "channel": "WEB",
@@ -74,7 +112,7 @@
                 "email": email,
                 "gender": "Male",
             };
-            Boxever.eventCreate(eventToSend, function (data) { }, 'json');
+            Boxever.eventCreate(eventToSendRevised, function (data) { }, 'json');
             alert("Identified guest as :" + fName + "\n with Email : " + email);
         }
 
@@ -102,10 +140,10 @@
                 channel: "WEB",
                 language: "EN",
                 currency: "EUR",
-                pos: BOXEVER_POINT_OF_SALE,
+                pos: window._boxever_settings.pointOfSale,
                 type: "FORCE_CLOSE",
                 _bx_extended_message: "1"
-            };
+            };  
 
             Boxever.eventCreate(closeSessionEvent, function (data) { }, 'json');
         }
@@ -143,6 +181,9 @@
 
         //Trigger Search Event - Queue Push
         function triggerEventViaPush() {
+            /*
+             *https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-0/send-a-search-event-to-sitecore-cdp.html
+             */
             // Place an anonymous function in the Boxever queue
             _boxeverq.push(function () {
                 var searchEvent = {
@@ -156,9 +197,32 @@
                     "product_name": "DUB-IND",
                     "product_type": "Push|DUB-IND|Business|Flex"
                 };
+
+                var SearchEventRevised = {
+                    "channel": "WEB",
+                    "type": "SEARCH",
+                    "language": "EN",
+                    "currency": "EUR",
+                    "page": "search result page",
+                    "pos": "BootCamp_MVC_CDP",
+                    "browser_id": Boxever.getID(),
+                    "product_name": "DUB-LON",
+                    "product_type": "FLIGHT",
+                    "flight_type": "RT",
+                    "origin": "DUB",
+                    "destination": "LON",
+                    "start": "2015-01-30T00:00",
+                    "end": "2015-02-01T00:00",
+                    "adults": 1,
+                    "children": 0,
+                    "infants": 0,
+                    "fare_class": "Economy",
+                    "fare_family": "Economy Plus"
+                }
+
                 // Invoke event create
                 // (<event msg>, <callback function>, <format>)
-                Boxever.eventCreate(searchEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
+                Boxever.eventCreate(SearchEventRevised, function (data) { alert(JSON.stringify(data)); }, 'json');
                 //alert(window._boxever_settings.pointOfSale);
             });
         }
@@ -174,12 +238,12 @@
                 "browser_id": Boxever.getID(),
                 //"language": "EN",
                 //"currency": "AED",
-                "page": "test-arvind",
+                "page": "test",
                 "product_name": "DUB-IND",
                 "product_type": "Http|DUB-IND|Business|Flex"
             };
 
-            var theUrl = 'https://api.boxever.com/v1.2/event/create.json?client_key=psfu6uh05hsr9c34rptlr06dn864cqrx&boxever_version=1.4.8&message=' + JSON.stringify(searchEvent, null) + '&callback=jsonp8454280818649853';
+            var theUrl = 'https://api.boxever.com/v1.2/event/create.json?client_key=pqsmpg99hzkfe1za3socuk3x1d6cvv69&boxever_version=1.4.8&message=' + JSON.stringify(searchEvent, null) + '&callback=jsonp8454280818649853';
             xmlHttp.open("GET", theUrl, false); // false for synchronous request
 
             xmlHttp.send(null);
