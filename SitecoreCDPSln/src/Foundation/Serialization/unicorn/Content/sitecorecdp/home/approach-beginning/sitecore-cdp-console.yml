@@ -1,0 +1,45 @@
+﻿---
+ID: "a799e9a1-3c82-40b7-a511-ae7c9673c589"
+Parent: "e0e68ff3-aea7-4fc9-b187-8108f834194e"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/approach-beginning/sitecore-cdp-console"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: Sitecore CDP Console
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Value: "20220804T152912:637952237525667657Z"
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        <p style="color: #2e475d; margin: 1em 0px; padding: 0px; border: 0px; line-height: 1.7em;"><span style="margin: 0px; padding: 0px; border: 0px; letter-spacing: 0.01em; line-height: inherit; color: inherit;">Let's take a quick look at how each one of these five possible UTM tags&nbsp;<a href="https://support.google.com/analytics/answer/1033863" style="color: #0b8484; margin: 0px; padding: 0px; border: 0px; line-height: inherit;">can be used</a>.</span></p>
+        <ul style="color: #2e475d; margin: 1em 0px 0.25em; padding: 0px; border: 0px; list-style-type: none; list-style-image: initial; line-height: inherit;">
+            <li style="color: inherit; margin: 1em 0px; padding: 0px 0px 0px 1.25rem; border: 0px; list-style-type: none; line-height: 1.75;"><span style="margin: 0px; padding: 0px; border: 0px; line-height: inherit;"><strong>S</strong></span><span style="margin: 0px; padding: 0px; border: 0px; line-height: inherit;"><strong>ource</strong></span>: Used to show which site the visitors are coming from.</li>
+            <li style="color: inherit; margin: 1em 0px; padding: 0px 0px 0px 1.25rem; border: 0px; list-style-type: none; line-height: 1.75;"><span style="margin: 0px; padding: 0px; border: 0px; line-height: inherit;"><strong>Medium</strong></span>: Used to show which marketing channels are bringing the visitor to your site. Examples include, but aren't limited to, email, social, or cost-per-click.&nbsp;</li>
+            <li style="color: inherit; margin: 1em 0px; padding: 0px 0px 0px 1.25rem; border: 0px; list-style-type: none; line-height: 1.75;"><span style="margin: 0px; padding: 0px; border: 0px; line-height: inherit;"><strong>Campaign</strong></span>: Used to identify which campaign the promotion is associated with.&nbsp;</li>
+            <li style="color: inherit; margin: 1em 0px; padding: 0px 0px 0px 1.25rem; border: 0px; list-style-type: none; line-height: 1.75;"><span style="margin: 0px; padding: 0px; border: 0px; line-height: inherit;"><strong>Term</strong></span>: Used to manually identify paid keywords you're targeting&nbsp;with your campaign.&nbsp;</li>
+            <li style="color: inherit; margin: 1em 0px; padding: 0px 0px 0px 1.25rem; border: 0px; list-style-type: none; line-height: 1.75;"><span style="margin: 0px; padding: 0px; border: 0px; line-height: inherit;"><strong>Content</strong></span>: Used to identify the exact element on your ad or promotion that was clicked. This is often used for optimization purposes.&nbsp;</li>
+            <li style="color: inherit; margin: 1em 0px; padding: 0px 0px 0px 1.25rem; border: 0px; list-style-type: none; line-height: 1.75;">
+            <div class="titlepage" style="color: #555555; background-color: #ffffff;">
+            <div class="title" style="margin: 0em 0px 1em;">
+            <h1 class="title" style="color: inherit; margin: 0em 0px 1em; line-height: 1.1;"></h1>
+            </div>
+            </div>
+            </li>
+            <li style="color: inherit; margin: 1em 0px; padding: 0px 0px 0px 1.25rem; border: 0px; list-style-type: none; line-height: 1.75;">
+            <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;"><span style="color: #000000;"><br />
+            </span></p>
+            </li>
+        </ul>
+    - ID: "2b8a5b67-7eb0-4e01-a4f3-6d32cfc73f55"
+      Hint: briefText
+      Value: Tracking view events through UTM Sources
+    - ID: "64913f60-6730-40a7-ae14-ae9b8d425009"
+      Hint: contentImage
+      Value: |
+        <image mediaid="{4D6C8FF7-9471-4E46-90C6-65F60D9B6E8E}" />

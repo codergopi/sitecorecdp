@@ -270,10 +270,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CDPNavigationController.cs" />
     <Compile Include="Controllers\CodeContentController.cs" />
     <Compile Include="Controllers\CodePageController.cs" />
     <Compile Include="Controllers\HomeHeroController.cs" />
     <Compile Include="Controllers\TabContentController.cs" />
+    <Compile Include="Models\MainLink.cs" />
+    <Compile Include="Models\MainNavigationModel.cs" />
+    <Compile Include="Models\SubLink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -282,6 +286,7 @@
     <Content Include="Views\CodeContent\Index.cshtml" />
     <Content Include="Views\TabContent\Index.cshtml" />
     <Content Include="Views\CodePage\Index.cshtml" />
+    <Content Include="Views\CDPNavigation\Index.cshtml" />
     <None Include="Views\web.config" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
@@ -293,7 +298,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

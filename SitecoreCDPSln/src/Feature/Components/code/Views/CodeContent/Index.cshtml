@@ -1,3 +1,50 @@
-﻿<div>Code Content Page</div>
-@Html.Sitecore().Field("heading")
-@Html.Sitecore().Field("content")
+﻿<div class="position-relative">
+    <div class="position-absolute">
+        <br />
+        <br />
+        <div class="card" style="align:center;">
+            @Html.Sitecore().Field("contentImage")
+            <div class="card-body">
+                <input type="hidden" id="pageInfoHdn" name="pageInfoHdn"
+                       value=@Html.Sitecore().Field("__Display Name") />
+                <h1 class="card-title">@Html.Sitecore().Field("heading")</h1>
+                <p class="card-text">@Html.Sitecore().Field("briefText")</p>
+            </div>
+            @Html.Sitecore().Field("content")
+            <div class="card-body">
+                <a href="#" class="card-link"></a>
+                <a href="#" class="card-link"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    window.onload = function () {
+        triggerEventOnView();
+    };
+
+    //Trigger Search Event - Queue Push
+    function triggerEventOnView() {
+        // Place an anonymous function in the Boxever queue
+        _boxeverq.push(function () {
+
+            var viewEvent = {
+                "channel": "WEB",
+                "type": "VIEW",
+                "language": "EN",
+                "currency": "EUR",
+                "page": document.getElementById('pageInfoHdn').value,
+                "pos": window._boxever_settings.pointOfSale,
+                "browser_id": Boxever.getID()
+            }
+            //Add UTM params
+            viewEvent = Boxever.addUTMParams(viewEvent);
+            // Invoke event create
+            // (<event msg>, <callback function>, <format>)
+            Boxever.eventCreate(viewEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
+        });
+    }
+
+</script>

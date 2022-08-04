@@ -1,0 +1,87 @@
+﻿---
+ID: "88b336bd-d919-4832-bf99-5c8e5b500fd9"
+Parent: "e0e68ff3-aea7-4fc9-b187-8108f834194e"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/approach-beginning/rest-api-overview"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: Overview of Sitecore CDP Stream APIs
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Value: "20220804T162757:637952272779674717Z"
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        <div class="titlepage" style="color: #555555; background-color: #ffffff;">
+        <div>
+        <div class="title" style="margin: 0em 0px 1em;">
+        </div>
+        </div>
+        </div>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">Sitecore CDP (Customer Data Platform) provides a suite of API Services that makes data management easier, faster, and more efficient. The Stream APIs capture fast-flowing, high-velocity event data at the same time that it is generated on your organization's website. The Stream APIs and Boxever JavaScript Library facilitate the capturing of events over web-based applications. Stream APIs can also be deployed in conjunction with your organization's data layer.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The following are the Sitecore CDP Stream APIs:</p>
+        <div class="itemizedlist" style="color: #555555; background-color: #ffffff;">
+        <ul class="itemizedlist" style="margin: 0px 0px 1.4em; padding-left: 40px; list-style-image: initial;">
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><strong>Browser API </strong>- the Browser Interface enables you to extend functionality within a web browser or other HTTP client. You can use the Browser Interface to manage cookies in the browser that help identify guests and facilitate personalization.</p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><strong>Event API</strong> - the Event Interface enables event processing. For example, you can use the Event API to send events in at speed from mobile applications or your website.</p>
+            </li>
+        </ul>
+        </div>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The Sitecore CDP Stream APIs have the following characteristics:</p>
+        <div class="itemizedlist" style="color: #555555; background-color: #ffffff;">
+        <ul class="itemizedlist" style="margin: 0px 0px 1.4em; padding-left: 40px; list-style-image: initial;">
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">Support synchronous calls</p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">Send write-only data</p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">Process structured data</p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">Capture online events</p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">Facilitate Online Data Capture (ODC)</p>
+            </li>
+        </ul>
+        </div>
+        <section dir="ltr" class="section" data-publication-date="07/25/22" id="when-to-use-the-sitecore-cdp-stream-apis" style="color: #555555; background-color: #ffffff;">
+        <div class="titlepage">
+        <div>
+        <div class="title">
+        <h2 class="title" style="color: inherit; margin: 1.2em 0px 1em; padding-bottom: 18px; border-bottom: 1px solid #e1e4e5; line-height: 1.1;">When to use the Sitecore CDP Stream APIs</h2>
+        </div>
+        </div>
+        </div>
+        <p style="margin: 0px 0px 1.4em;">Sitecore CDP Stream APIs provide a light-touch integration that facilitate immediate realization of Sitecore CDP functionality. The Sitecore CDP Stream APIs are used for the following purposes:</p>
+        <div class="itemizedlist">
+        <ul class="itemizedlist" style="margin: 0px 0px 1.4em; padding-left: 40px; list-style-image: initial;">
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><strong>Online data capture </strong>- you can integrate the Sitecore CDP Stream APIs with your data layer to capture guest activity as guests navigate your online booking flow. Sitecore CDP can also integrate with your website, mobile app, and call center.</p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><strong>Website personalization </strong>- your organization's web-based application can pass guest, behavioral, and transactional data to Sitecore CDP to use in real-time decisioning and experiment execution.</p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><strong>Behavioral information </strong>- the Event API captures a guest's behavioral data that can immediately be used in real-time personalization. For example, the pages the guest visits, the searches the guest performs, purchased products, and products added to the cart but not purchased.</p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><strong>Optimizes Sitecore CDP Decisioning </strong>- the Stream APIs capture behavioral and transactional data to ensure that&nbsp;<a class="link" data-olink="true" href="https://doc.sitecore.com/cdp/en/users/sitecore-personalize/en/introduction-to-decisioning-in-sitecore-personalize.html" style="color: #006f7c; background-color: transparent;">Sitecore CDP Decisioning</a>&nbsp;has the most up-to-date guest, order, and search data for use in personalization and experiments.</p>
+            </li>
+        </ul>
+        </div>
+        </section>
+    - ID: "64913f60-6730-40a7-ae14-ae9b8d425009"
+      Hint: contentImage
+      Value: |
+        <image mediaid="{5937C34B-FCC1-4DB6-B86A-E74938F7D113}" />

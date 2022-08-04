@@ -1,0 +1,231 @@
+﻿---
+ID: "36b4a9f0-25bd-4f2d-8a0e-8baa9cf3020f"
+Parent: "e0e68ff3-aea7-4fc9-b187-8108f834194e"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/approach-beginning/custom-event-creation"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 275
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Custom Event Creation
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: Custom Event Creation
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220804T172713Z
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        <p style="color: #555555; background-color: #ffffff; margin-right: 0px; margin-bottom: 1.4em; margin-left: 0px;">After you have tagged your site, you can send standard and custom events to the Event API. A custom event is unique to your organization. For example, most retail sites have an&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">ADD</code>&nbsp;event that captures when a guest clicks the&nbsp;add&nbsp;button. However, you might want to capture, for example, how many times a guest adds items to a wish list and this is not known as a standard event in Sitecore CDP. To do this, you can send a custom event called&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">ADD_TO_LIST</code>.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">To support these business scenarios, you can send a custom event. You can track how often a custom event is raised by creating a custom goal for an experiment. You can also use the raising of the custom event as the basis for declaring a winner in your experiment.</p>
+        <div dir="ltr" class="note notice" style="color: #555555; background: #f2f2f2; margin-bottom: 1em; padding: 15px 20px;">
+        <h3 class="title" style="color: black; margin: 0px 0px 1em; padding: 0px; line-height: 1.1;">Notice</h3>
+        <p style="margin: 0px 0px 1.4em; padding-right: 10px; padding-bottom: 0px; padding-left: 0px;">You send a custom event in the same way that you send a standard event. You must be consistent with the name of the custom event you send and you must not use the name of a standard event.</p>
+        </div>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">To send a custom event, use the following required attributes:</p>
+        <div class="informaltable table-responsive" style="color: #555555; background-color: #ffffff; margin-bottom: 2em; border: none;">
+        <table class="informaltable frame-void rules-rows" style="background-color: transparent; width: 1110.09px; border-spacing: 0px; border-top: 1px solid black; border-left: 1px solid black; border-right-color: black; border-bottom-color: black; border-right-style: solid; border-bottom-style: solid;">
+            <colgroup><col style="width: 277.266px;" /><col style="width: 221.812px;" /><col style="width: 221.812px;" /><col style="width: 221.812px;" /><col style="width: 166.391px;" /></colgroup>
+            <thead>
+                <tr style="background: #f2f2f2;">
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Attribute</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Description</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Type</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Example(s)</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required/optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">channel</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The channel captured on each page the guest visited.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">"WEB", "MOBILE_WEB", "MOBILE_APP"</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">type</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The name of the custom event.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string (uppercase)</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">"ADD_TO_LIST"</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">pos</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The point of sale (storefront) captured on each page the guest visited.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string (predefined by client)</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">"spinflight.com", "spinair.com"</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">browser_id</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The ID of a browser generated by Sitecore CDP.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string (UUID)</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">"56860bff-94ba-4d84-aa37-2b5a83d5411b"</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The following JSON example demonstrates how to send a custom event:</p>
+        <p>
+        </p>
+        <pre class="programlisting hljs json" style="color: #000000; background: #ffffff; margin: 15px; padding: 0.5em; border: none; line-height: 1.4;">{ <span class="hljs-attr" style="color: #660066;">"channel"</span>: <span class="hljs-string" style="color: #008800;">"WEB"</span>, <span class="hljs-attr" style="color: #660066;">"type"</span>: <span class="hljs-string" style="color: #008800;">"ADD_TO_LIST"</span>, <span class="hljs-attr" style="color: #660066;">"pos"</span>: <span class="hljs-string" style="color: #008800;">"myretail.com"</span>, <span class="hljs-attr" style="color: #660066;">"browser_id"</span>: <span class="hljs-string" style="color: #008800;">"56860bff-94ba-4d84-aa37-2b5a83d5411b"</span> }</pre>
+        <p>&nbsp;</p>
+        <div class="titlepage" style="color: #555555; background-color: #ffffff;">
+        <div>
+        <div class="title">
+        <h2 class="title" style="color: inherit; margin: 1.2em 0px 1em; padding-bottom: 18px; border-bottom: 1px solid #e1e4e5; line-height: 1.1;">Reserved event names</h2>
+        </div>
+        </div>
+        </div>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The following is a list of reserved event names for Sitecore CDP standard events. You must not use any of the following event names for sending custom events:</p>
+        <div class="itemizedlist" style="color: #555555; background-color: #ffffff;">
+        <ul class="itemizedlist" style="margin: 0px 0px 1.4em; padding-left: 40px; list-style-image: initial;">
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">ADD</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">ADD_CONSUMERS</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">ADD_CONTACTS</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">ADD_PRODUCT</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">CALCULATOR</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">CAMPAIGN_TRACKING</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">CLICK</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">CHAT</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">COMMENT</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">CONFIRM</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">CONTACT_REQUEST</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">CONSUMERS</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">EMAIL</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">IDENTITY</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">LOGIN</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">NOTIFICATION</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">ORDER_UPDATE</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">PAYMENT</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">PURCHASE</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">PNR_RECORD</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">SMS</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">SUBSCRIPTION</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">SEARCH</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">SELECT</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">TRIGGER</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">TRIP_SUMMARY</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">UPDATE</code></p>
+            </li>
+            <li class="listitem">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">VIEW</code></p>
+            </li>
+        </ul>
+        </div>
+        <p>&nbsp;</p>

@@ -1,17 +1,21 @@
 ﻿---
-ID: "304fe839-2b3c-47b6-99f2-ddbf8181e487"
+ID: "e0e68ff3-aea7-4fc9-b187-8108f834194e"
 Parent: "58a023cd-49d7-458b-ae2f-29acec05a2d7"
 Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
-Path: /sitecore/content/sitecorecdp/home/firstpage
+Path: "/sitecore/content/sitecorecdp/home/approach-beginning"
 DB: master
 Languages:
 - Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Training Material Intro
   Versions:
   - Version: 1
     Fields:
     - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
       Hint: heading
-      Value: firstpage
+      Value: API endpoints for Sitecore CDP 2.0 data model
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220802T082732Z
+      Value: 20220802T082800Z

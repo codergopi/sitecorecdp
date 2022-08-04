@@ -1,0 +1,78 @@
+﻿---
+ID: "43a18c8b-9a05-4267-a4a8-a93989299e0e"
+Parent: "e0e68ff3-aea7-4fc9-b187-8108f834194e"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/approach-beginning/browser-id-creation"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 250
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Browser Id Creation
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: Browser Id Creation
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220804T172043Z
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        <p style="color: #555555; background-color: #ffffff; margin-right: 0px; margin-bottom: 1.4em; margin-left: 0px;">Use the Browser Service to create a&nbsp;browser&nbsp;reference (<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">ref</code>) and&nbsp;customer&nbsp;reference (<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">customer_ref</code>) with the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">guestType</code>&nbsp;attribute set to&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">Visitor</code>. The&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">customer_ref</code>&nbsp;is the unique guest reference.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">Both references are included in the response. This functionality is supported by the&nbsp;<a class="link" title="Release notes for JavaScript library" style="color: #006f7c; background-color: transparent;">Boxever JavaScript Library version 1.4.7</a>.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">To create a browser reference in Sitecore CDP, use the following:</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">GET&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">https://{apiEndpoint}/v1.2/browser/create.json?client_key={{CLIENT_KEY}}&amp;message={}</code></p>
+        <div class="informaltable table-responsive" style="color: #555555; background-color: #ffffff; margin-bottom: 2em; border: none;">
+        <table class="informaltable frame-void rules-rows" style="background-color: transparent; width: 1110.09px; border-spacing: 0px; border-top: 1px solid black; border-left: 1px solid black; border-right-color: black; border-bottom-color: black; border-right-style: solid; border-bottom-style: solid;">
+            <thead>
+                <tr style="background: #f2f2f2;">
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Parameter</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Type</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">client_key</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Your organization's unique identifier.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">message</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The body of the message. Leave this empty for retrieving the<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">browserId</code>attribute.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The following 200&nbsp;(OK) status code indicates that the request was successfully processed:</p>
+        <p>
+        </p>
+        <pre class="programlisting hljs json" style="color: #000000; background: #ffffff; margin: 15px; padding: 0.5em; border: none; line-height: 1.4;">{ <span class="hljs-attr" style="color: #660066;">"status"</span>:<span class="hljs-string" style="color: #008800;">"OK"</span>, <span class="hljs-attr" style="color: #660066;">"version"</span>:<span class="hljs-string" style="color: #008800;">"1.2"</span>, <span class="hljs-attr" style="color: #660066;">"client_key"</span>:<span class="hljs-string" style="color: #008800;">"ghsPMFpfrXBzxKozB0IoL4yyAT0s7WrH"</span>, <span class="hljs-attr" style="color: #660066;">"ref"</span>:<span class="hljs-string" style="color: #008800;">"4888p5d9-6117-4f8d-a182-271c3e917103"</span>, <span class="hljs-attr" style="color: #660066;">"customer_ref"</span>:<span class="hljs-string" style="color: #008800;">"96399992-e333-444e-bta0-74dd8486f018"</span> }</pre>
+        <p>&nbsp;</p>

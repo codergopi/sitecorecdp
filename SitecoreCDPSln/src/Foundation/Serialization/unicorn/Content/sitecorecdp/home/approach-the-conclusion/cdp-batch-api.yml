@@ -1,0 +1,379 @@
+﻿---
+ID: "7be6ff54-41ae-406f-ae00-2713863e4825"
+Parent: "58816c3b-82a6-4630-a7b4-94ccea4deef0"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/approach-the-conclusion/cdp-batch-api"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: CDP Batch API
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: Import a batch file into Sitecore CDP
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220804T173016Z
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        <p style="color: #555555; background-color: #ffffff; margin-right: 0px; margin-bottom: 1.4em; margin-left: 0px;">You can upload guests, orders, products and tracking events to Sitecore CDP. Before you import the batch file, you must ensure that the file meets&nbsp;<a class="link" href="https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-0/sitecore-cdp-batch-file-format-requirements.html" title="Sitecore CDP batch file format requirements" style="color: #006f7c; background-color: transparent;">formatting requirements</a>.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">To import a batch file into Sitecore CDP:</p>
+        <div class="procedure" style="color: #555555; background-color: #ffffff; margin-left: 0px;">
+        <ol class="procedure" style="margin: 0px 0px 0px 40px; padding: 0px; list-style-type: none;">
+            <li class="step" style="margin-bottom: 10px; list-style-type: decimal;">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">Compress the batch file you want to import. Apply GZIP compression to the batch import file using either operating system utilities or a programmatic approach. There is a 50MB size limit for uploading batch files.</p>
+            <div dir="ltr" class="tip" style="background: #f2f2f2; margin-bottom: 1em; padding: 15px 20px;">
+            <h3 class="title" style="color: black; margin: 0px 0px 1em; padding: 0px; line-height: 1.1;">Tip</h3>
+            <p style="margin: 0px 0px 11px; padding-right: 10px; padding-bottom: 0px; padding-left: 0px;">If the size of the compressed batch file exceeds the 50MB limit, recompress the files into two or more compressed batch files that do not exceed the 50MB size limit. Then upload the compressed files as separate batches.</p>
+            </div>
+            </li>
+            <li class="step" style="margin-bottom: 10px; list-style-type: decimal;">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">Generate a hex-encoded MD5 checksum for the compressed file. You must provide this during the&nbsp;<a class="link" href="https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-0/import-a-batch-file-into-sitecore-cdp.html#UUID-5396489c-afa8-e47b-de60-699eb9e29aa3_N1623857471158" title="Step 5" style="color: #006f7c; background-color: transparent;">upload process</a>&nbsp;to provide assurance that the integrity of the import file sent is intact.</p>
+            <p style="margin: 0px 0px 11px;">The following command generates the MD5 hash:&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">$ md5 import.json.gz</code></p>
+            <p style="margin: 0px 0px 11px;">The following is an example of the generated output:&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">MD5 (import.json.gz)= 69b8a56502866f460e5930f7e53d4bf9</code></p>
+            </li>
+            <li class="step" style="margin-bottom: 10px; list-style-type: decimal;">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">If you are importing the file using a PUT request, generate a unique identifier for the batch. This will be used when interacting with the Batch API endpoint and should be unique across all batches.</p>
+            <div dir="ltr" class="important" style="background: #f2f2f2; margin-bottom: 1em; padding: 0px 0px 10px; border-left: 10px solid #006f7c;">
+            <h3 class="title" style="color: black; margin: 0px 0px 1em; padding: 15px 20px 0px; line-height: 1.1;">Important</h3>
+            <p style="margin: 0px 0px 11px 20px; padding-right: 10px; padding-bottom: 0px; padding-left: 0px;">The identifier must be in&nbsp;<a class="link" href="https://en.wikipedia.org/wiki/Universally_unique_identifier#Format" target="_blank" rel="noopener noreferrer" style="color: #006f7c; background-color: transparent;">UUID format</a>. When you append this identifier to the Batch API endpoint, it forms the unique URL for this batch upload request.</p>
+            </div>
+            </li>
+            <li class="step" style="margin-bottom: 10px; list-style-type: decimal;">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">Issue a JSON HTTP PUT request to the Sitecore CDP Batch API to allocate a location to which you subsequently upload the batch file. The following table defines the fields in the body of the request:</p>
+            <div class="informaltable table-responsive" style="margin-bottom: 2em; border: none;">
+            <table class="informaltable frame-void rules-rows" style="background-color: transparent; width: 1070.09px; border-spacing: 0px; border-top: 1px solid black; border-left: 1px solid black; border-right-color: black; border-bottom-color: black; border-right-style: solid; border-bottom-style: solid;">
+                <thead>
+                    <tr style="background: #f2f2f2;">
+                        <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Attribute</p>
+                        </th>
+                        <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Type</p>
+                        </th>
+                        <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Description</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #f2f2f2;">
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">checksum</code></p>
+                        </td>
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                        </td>
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">MD5 checksum</code>of the compressed batch file, produced in step 2.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">size</code></p>
+                        </td>
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">integer</p>
+                        </td>
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Size in bytes of the compressed batch file.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <p style="margin: 0px 0px 11px;">The following is an example of a pre-signed URL&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">PUT</code>&nbsp;request:</p>
+            </li>
+        </ol>
+        </div>
+        <div>
+        <pre class="programlisting hljs yaml" style="color: #000000; background: #ffffff; margin: 15px; padding: 0.5em; border: none; line-height: 1.4;"><span class="hljs-attr" style="color: #660066;">Authorization:</span> <span class="hljs-string" style="color: #008800;">Basic</span> <span class="hljs-string" style="color: #008800;">aHR0cHdhdGNoOmY=</span> <span class="hljs-attr" style="color: #660066;">Content-Type:</span> <span class="hljs-string" style="color: #008800;">application/json</span> <span class="hljs-attr" style="color: #660066;">Accept:</span> <span class="hljs-string" style="color: #008800;">application/json</span> <span class="hljs-string" style="color: #008800;">PUT</span> <span class="hljs-string" style="color: #008800;">https://api.boxever.com/v2/batches/3ee694e5-0b77-2d1e-af19-1aa78f500785</span> { <span class="hljs-string" style="color: #008800;">&ldquo;checksum&rdquo;:</span> <span class="hljs-string" style="color: #008800;">&ldquo;40d9a12f0a3c93c8ed66a3b6f3735790&rdquo;</span>, <span class="hljs-string" style="color: #008800;">&ldquo;size&rdquo;:</span> <span class="hljs-number" style="color: #006666;">3456</span> }</pre>
+        <p style="color: #555555; background-color: #ffffff; margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">The following fields can be returned in the body of the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">PUT</code>&nbsp;response:</p>
+        <div class="informaltable table-responsive" id="UUID-5396489c-afa8-e47b-de60-699eb9e29aa3_N1623858050026" style="color: #555555; background-color: #ffffff; margin-bottom: 2em; border: none;">
+        <table class="informaltable frame-void rules-rows" style="background-color: transparent; width: 1070.09px; border-spacing: 0px; border-top: 1px solid black; border-left: 1px solid black; border-right-color: black; border-bottom-color: black; border-right-style: solid; border-bottom-style: solid;">
+            <colgroup><col style="width: 475.141px;" /><col style="width: 415.75px;" /><col style="width: 178.203px;" /></colgroup>
+            <thead>
+                <tr style="background: #f2f2f2;">
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Attribute</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Description</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Type</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">href</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Echo back of URL used in this request.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">ref</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">UUID of the batch, forms part of the href.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">checksum</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Echo back of checksum of the uploading file.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">size</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Echo back of the size of the uploading file.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">integer</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">location</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Details on the file upload location.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">object</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">location.href</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The allocated URL to which you upload the batch file. This URL is valid for one hour.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">location.expiry</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Date and time that the upload location href expires.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">date time</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">status</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Contains the status of the file upload.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">object</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">status.code</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px;">The batch file processing status. Possible values;</p>
+                    <div class="itemizedlist">
+                    <ul class="itemizedlist" style="margin: 0px 0px 1.4em; padding-left: 40px; list-style-image: initial;">
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">uploading</code>- the import process was initialized by the client.</p>
+                        </li>
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">fileprocessing</code>- import file was uploaded and processing has started.</p>
+                        </li>
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">success</code>- import file was successfully processed.</p>
+                        </li>
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">corrupted </code>- import file did not match the checksum.</p>
+                        </li>
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">error</code>- import has failed, see the log file. The location of the log file is the value of the<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">status.log</code>parameter.</p>
+                        </li>
+                    </ul>
+                    </div>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">status.log</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">If the batch upload request contains errors, the location of the log file that includes details of the errors.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">summaryStats</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Contains a summary of statistics on the file upload.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">object</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">summaryStats.timeToProcessMillis</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The amount of time, in milliseconds, that the batch import job took to run.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">integer</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">summaryStats.totalCount</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The total number of records read from the import file by the batch import job.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">integer</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">summaryStats.succeededCount</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The number of records that the batch import job successfully processed.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">integer</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">summaryStats.failedCount</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The number of records that the batch import job failed to process.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">integer</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">createdAt</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Date and time the request was created.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">date time</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">modifiedAt</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Date and time the request was last updated.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">date time</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 11px;">The following is an example of the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">PUT</code>&nbsp;response:</p>
+        <pre class="programlisting hljs perl" style="color: #000000; background: #ffffff; margin: 15px; padding: 0.5em; border: none; line-height: 1.4;">{ <span class="hljs-string" style="color: #008800;">"href"</span>: <span class="hljs-string" style="color: #008800;">"https://api.boxever.com/v2/batches/3ee694e5-0b77-2d1e-af19-1aa78f500785"</span>, <span class="hljs-string" style="color: #008800;">"ref"</span> : <span class="hljs-string" style="color: #008800;">"3ee694e5-0b77-2d1e-af19-1aa78f500785"</span>, <span class="hljs-string" style="color: #008800;">"checksum"</span> : <span class="hljs-string" style="color: #008800;">"40d9a12f0a3c93c8ed66a3b6f3735790"</span>, <span class="hljs-string" style="color: #008800;">"size"</span> : <span class="hljs-number" style="color: #006666;">3456</span>, <span class="hljs-string" style="color: #008800;">"location"</span> : { <span class="hljs-string" style="color: #008800;">"href"</span> : <span class="hljs-string" style="color: #008800;">"https://boxever-batch-service-production-eu-west-1.s3.amazonaws.com/xyzsla2xze5vxn02kf283wo020jg/3ee694e5-0b77-2d1e-af19-1aa78f500785/import.gz?AWSAccessKeyId=AKIAI2JLVI7OT2L6QDRQ&amp;Expires=1459953714&amp;Signature=yIG7nFv5w%2B2N%2Fkz11Eh7BjqSt2U%3D"</span>, <span class="hljs-string" style="color: #008800;">"expiry"</span> : <span class="hljs-string" style="color: #008800;">"2016-02-06T14:41:54.251Z"</span> }, <span class="hljs-string" style="color: #008800;">"status"</span> : { <span class="hljs-string" style="color: #008800;">"code"</span> : <span class="hljs-string" style="color: #008800;">"uploading"</span> }, <span class="hljs-string" style="color: #008800;">"createdAt"</span> : <span class="hljs-string" style="color: #008800;">"2016-02-06T13:41:54.251Z"</span>, <span class="hljs-string" style="color: #008800;">"modifiedAt"</span> : <span class="hljs-string" style="color: #008800;">"2016-02-06T13:41:54.251Z"</span> }</pre>
+        <div class="procedure" style="color: #555555; background-color: #ffffff; margin-left: 0px;">
+        <ol class="procedure" style="margin: 0px 0px 0px 40px; padding: 0px; list-style-type: none;">
+            <li class="step" id="UUID-5396489c-afa8-e47b-de60-699eb9e29aa3_N1623857471158" style="margin-bottom: 10px; list-style-type: decimal;">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">Apply Base64 encoding to the MD5 checksum of the batch file to be uploaded, which was produced in Step 2. The hexadecimal value of the checksum must be first converted to bytes, and then the bytes must be converted to Base64.</p>
+            </li>
+            <li class="step" style="margin-bottom: 10px; list-style-type: decimal;">
+            <p style="margin-right: 0px; margin-bottom: 11px; margin-left: 0px;">To upload the batch file, issue a HTTP&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">PUT</code>&nbsp;request to the file upload location. This is the URL provided in the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;"><a class="link" href="https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-0/import-a-batch-file-into-sitecore-cdp.html#UUID-5396489c-afa8-e47b-de60-699eb9e29aa3_N1623858050026" style="color: #006f7c; background-color: transparent;">location.href</a></code>&nbsp;attribute in the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">PUT</code>&nbsp;response. Include the following additional headers:</p>
+            <div class="informaltable table-responsive" style="margin-bottom: 2em; border: none;">
+            <table class="informaltable frame-void rules-rows" style="background-color: transparent; width: 1070.09px; border-spacing: 0px; border-top: 1px solid black; border-left: 1px solid black; border-right-color: black; border-bottom-color: black; border-right-style: solid; border-bottom-style: solid;">
+                <thead>
+                    <tr style="background: #f2f2f2;">
+                        <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Header Name</p>
+                        </th>
+                        <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Value</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #f2f2f2;">
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">x-amz-server-side-encryption</code></p>
+                        </td>
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Constant value of AES256.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">Content-Md5</code></p>
+                        </td>
+                        <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Base64 encoded checksum.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </li>
+        </ol>
+        </div>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The following is an example of a file upload request:</p>
+        &nbsp;
+        <pre class="programlisting hljs apache" style="color: #000000; background: #ffffff; margin: 15px; padding: 0.5em; border: none; line-height: 1.4;"><span class="hljs-attribute">x</span>-amz-server-side-encryption: AES<span class="hljs-number" style="color: #006666;">256</span> <span class="hljs-attribute">Content</span>-Md<span class="hljs-number" style="color: #006666;">5</span>: QNmhLwo<span class="hljs-number" style="color: #006666;">8</span>k<span class="hljs-number" style="color: #006666;">8</span>jtZqO<span class="hljs-number" style="color: #006666;">283</span>NXkA== <span class="hljs-attribute">PUT</span> https://boxever-batch-service-production-eu-west-<span class="hljs-number" style="color: #006666;">1</span>.s<span class="hljs-number" style="color: #006666;">3</span>.amazonaws.com/xyzsla<span class="hljs-number" style="color: #006666;">2</span>xze<span class="hljs-number" style="color: #006666;">5</span>vxn<span class="hljs-number" style="color: #006666;">02</span>kf<span class="hljs-number" style="color: #006666;">283</span>wo<span class="hljs-number" style="color: #006666;">020</span>jg/<span class="hljs-number" style="color: #006666;">3</span>ee<span class="hljs-number" style="color: #006666;">694</span>e<span class="hljs-number" style="color: #006666;">5</span>-<span class="hljs-number" style="color: #006666;">0</span>b<span class="hljs-number" style="color: #006666;">77</span>-<span class="hljs-number" style="color: #006666;">2</span>d<span class="hljs-number" style="color: #006666;">1</span>e-af<span class="hljs-number" style="color: #006666;">19</span>-<span class="hljs-number" style="color: #006666;">1</span>aa<span class="hljs-number" style="color: #006666;">78</span>f<span class="hljs-number" style="color: #006666;">500785</span>/import.gz?AWSAccessKeyId=AKIAI<span class="hljs-number" style="color: #006666;">2</span>JLVI<span class="hljs-number" style="color: #006666;">7</span>OT<span class="hljs-number" style="color: #006666;">2</span>L<span class="hljs-number" style="color: #006666;">6</span>QDRQ&amp;Expires=<span class="hljs-number" style="color: #006666;">1459953714</span>&amp;Signature=yIG<span class="hljs-number" style="color: #006666;">7</span>nFv<span class="hljs-number" style="color: #006666;">5</span>w%<span class="hljs-number" style="color: #006666;">2</span>B<span class="hljs-number" style="color: #006666;">2</span>N%<span class="hljs-number" style="color: #006666;">2</span>Fkz<span class="hljs-number" style="color: #006666;">11</span>Eh<span class="hljs-number" style="color: #006666;">7</span>BjqSt<span class="hljs-number" style="color: #006666;">2</span>U%<span class="hljs-number" style="color: #006666;">3</span>D <span class="hljs-section" style="color: #000088;">&lt;BATCH FILE CONTENT AS BYTES&gt;</span></pre>
+        </div>
+        <div dir="ltr" class="caution" style="color: #555555; background: #f2f2f2; margin-bottom: 1em; padding: 0px 0px 10px;">
+        <h3 class="title" style="color: black; margin: 0px 0px 1em; padding: 15px 20px 0px; line-height: 1.1;">Caution</h3>
+        </div>
+        <p style="margin: 0px 0px 1.4em 20px; padding-right: 10px; padding-bottom: 0px; padding-left: 0px;">The&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">content-type</code>&nbsp;header must be added to the request. If you are using HTTP utility classes in programming languages, the content-type header can automatically be added to the request. This can cause the calculated signature of the upload request to not match the signature of the pre-signed URL and can cause HTTP 401 unauthorized errors.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The following are additional details on the batch import process:</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The file you upload is checked against the checksum and file size you provided in the original PUT request. If the size of the import does not match the one specified in the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">size</code>&nbsp;field in the request, the service returns a HTTP 400 response. If an attempt is made to alter the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">checksum</code>, the service returns a HTTP 409 response.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">You can import batch files in parallel. If there are any interdependencies between imports, it is best practice to wait until the initial import is completed before starting any subsequent dependent imports. The file upload can stall for a number of reasons, such as network latency. The server timeout interval of the batch upload is set to 60 minutes.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">You can&nbsp;<a class="link" href="https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-0/verifying-a-batch-file-upload-status-in-sitecore-cdp.html" title="Verifying a batch file upload status in Sitecore CDP" style="color: #006f7c; background-color: transparent;">check the batch API import status</a>&nbsp;by issuing a GET request to the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">batches</code>&nbsp;endpoint, using the same UUID you generated in step 3.</p>

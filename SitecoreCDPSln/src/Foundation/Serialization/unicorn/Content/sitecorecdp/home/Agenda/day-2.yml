@@ -1,0 +1,56 @@
+﻿---
+ID: "f016b5c1-3d6b-448c-ad6e-632c6a6c8ac5"
+Parent: "304fe839-2b3c-47b6-99f2-ddbf8181e487"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/agenda/day-2"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Final Day Training
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: "More into Sitecore CDP - Lets look under the hood"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220802T082747Z
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Sitecore CDP decision data model
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            How to apply Experience and Experiment in CDP console
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Sitecore CDP connections data model REST API
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Using the Sitecore CDP flow execution REST API
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Using Sitecore CDP data lake export service
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+        </ul>
+    - ID: "2b8a5b67-7eb0-4e01-a4f3-6d32cfc73f55"
+      Hint: briefText
+      Value: Lets go deeper into boxever and try to figure out the complete picture
+    - ID: "64913f60-6730-40a7-ae14-ae9b8d425009"
+      Hint: contentImage
+      Value: |
+        <image mediaid="{DDA1DF35-B800-45E4-A2BC-DC9D816A92BD}" />
+    - ID: "a0a4d9b7-2798-4f5c-93a8-bd661b2c1d01"
+      Hint: CodeDescTitle
+      Value: "codepage-2"

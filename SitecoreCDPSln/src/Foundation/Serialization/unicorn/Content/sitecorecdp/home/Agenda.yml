@@ -1,0 +1,77 @@
+﻿---
+ID: "304fe839-2b3c-47b6-99f2-ddbf8181e487"
+Parent: "58a023cd-49d7-458b-ae2f-29acec05a2d7"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: /sitecore/content/sitecorecdp/home/agenda
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Agenda
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: "Sitecore CDP - Bootcamp Training - Agenda"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220802T082732Z
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Overview of Sitecore CDP and Personalize
+            <span class="badge bg-primary rounded-pill">15</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Sitecore CDP Console overview
+            <span class="badge bg-primary rounded-pill">45</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Overview of Sitecore CDP REST APIs
+            <span class="badge bg-primary rounded-pill">30</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Integrating  Sitecore CDP with Sample  MVC App
+            <span class="badge bg-primary rounded-pill">180</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Sending order to Sitecore CDP
+            <span class="badge bg-primary rounded-pill">45</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Sending event to Sitecore CDP
+            <span class="badge bg-primary rounded-pill">45</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Sitecore CDP decision data model
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            How to apply Experience and Experiment in CDP console
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Sitecore CDP connections data model REST API
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Using the Sitecore CDP flow execution REST API
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+            Using Sitecore CDP data lake export service
+            <span class="badge bg-primary rounded-pill">60</span>
+            </li>
+        </ul>
+    - ID: "2b8a5b67-7eb0-4e01-a4f3-6d32cfc73f55"
+      Hint: briefText
+      Value: This training starts from the basic knowledge and few history of Sitecore with Boxever and goes deeper into its implementation on Sitecore MVC Application. 
+    - ID: "64913f60-6730-40a7-ae14-ae9b8d425009"
+      Hint: contentImage
+      Value: |
+        <image mediaid="{BE5322CF-3F21-483C-8BD2-57D9692CACAD}" />

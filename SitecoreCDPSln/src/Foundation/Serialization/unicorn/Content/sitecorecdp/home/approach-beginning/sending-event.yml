@@ -1,0 +1,67 @@
+﻿---
+ID: "bcbb16c5-7ee3-4eb6-9d8a-6eb51ea2643e"
+Parent: "e0e68ff3-aea7-4fc9-b187-8108f834194e"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/approach-beginning/sending-event"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: Sending Events to CDP
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Value: "20220804T162449:637952270896131329Z"
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        Sending View Event<br />
+        <br />
+        {<br />
+        &nbsp; &nbsp; "channel": "WEB",<br />
+        &nbsp; &nbsp; "type": "VIEW",<br />
+        &nbsp; &nbsp; "language": "EN",<br />
+        &nbsp; &nbsp; "currency": "EUR",<br />
+        &nbsp; &nbsp; "page": "home page",<br />
+        &nbsp; &nbsp; "pos": "spinair.com",<br />
+        &nbsp; &nbsp; "browser_id": "56860bff-94ba-4d84-aa37-2b5a83d5411b"<br />
+        }<br />
+        <br />
+        Tracking Data in View Event<br />
+        <br />
+        // Place an anonymous function in the Boxever queue&nbsp;<br />
+        _boxeverq.push(function() {&nbsp;<br />
+        &nbsp; &nbsp; var viewEvent = {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; "browser_id": Boxever.getID(),<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; "channel": "WEB",<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; "type": "VIEW",<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; "language": "EN",<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; "currency": "EUR",<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; "page": "/home",<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; "pos": "spinair.com"<br />
+        &nbsp; &nbsp; };<br />
+        &nbsp; &nbsp; //Add UTM params<br />
+        &nbsp; &nbsp; viewEvent = Boxever.addUTMParams(viewEvent);<br />
+        &nbsp; &nbsp; // Invoke event create&nbsp;<br />
+        &nbsp; &nbsp; // (&lt;event msg&gt;, &lt;callback function&gt;, &lt;format&gt;)<br />
+        &nbsp; &nbsp; Boxever.eventCreate(viewEvent, function(data){}, 'json');<br />
+        });<br />
+        <br />
+        Session Data in View Event<br />
+        <br />
+        {&nbsp;&nbsp;<br />
+        &nbsp; &nbsp;"channel":"WEB",<br />
+        &nbsp; &nbsp;"type":"VIEW",<br />
+        &nbsp; &nbsp;"language":"EN",<br />
+        &nbsp; &nbsp;"currency":"EUR",<br />
+        &nbsp; &nbsp;"page":"home page",<br />
+        &nbsp; &nbsp;"pos":"spinair.com",<br />
+        &nbsp; &nbsp;"browser_id":"56860bff-94ba-4d84-aa37-2b5a83d5411b",<br />
+        &nbsp; &nbsp;"session_data":{&nbsp;&nbsp;<br />
+        &nbsp; &nbsp; &nbsp; "deep_link":"https://www.spinair.com/search?origin=DUB&amp;destination=LHR",<br />
+        &nbsp; &nbsp; &nbsp; "is_logged_in":true,<br />
+        &nbsp; &nbsp; &nbsp; "assistance":false<br />
+        &nbsp; &nbsp;}<br />
+        }
