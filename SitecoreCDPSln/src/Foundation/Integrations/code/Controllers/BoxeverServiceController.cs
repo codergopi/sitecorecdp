@@ -47,7 +47,7 @@ namespace SitecoreCDP.Foundation.Integrations.Controllers
                     content = stream.ReadToEnd();
                 }
                 //Company myDeserializedClass = JsonSerializer.Deserialize<Company>(content);
-                return content;
+                return response.ToString();
             }
             return null;
 

@@ -14,11 +14,13 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{2044B2A4-FB14-4DF7-9BB0-4A06CA5237A5}"
-          s:ccb="Clear on publish"
+          uid="{8F1931C2-5D3F-4B7B-9D4B-72994C2DC814}"
+          p:after="*[1=2]"
           s:ds="{9C5F6BBB-98F6-401C-B8DF-B7FBCAA954D1}"
           s:id="{1C626537-5F75-4A2B-8300-E9AA568F5253}"
-          s:par="" />
+          s:par=""
+          s:ph="cdp-main"
+          s:ccb="Clear on publish" />
       </d>
     </r>
 Languages:

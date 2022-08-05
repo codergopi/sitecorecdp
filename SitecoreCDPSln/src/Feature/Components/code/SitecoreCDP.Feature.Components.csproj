@@ -272,6 +272,7 @@
   <ItemGroup>
     <Compile Include="Controllers\CDPIdentificationController.cs" />
     <Compile Include="Controllers\CDPNavigationController.cs" />
+    <Compile Include="Controllers\CDPPersonProfileController.cs" />
     <Compile Include="Controllers\CodeContentController.cs" />
     <Compile Include="Controllers\CodePageController.cs" />
     <Compile Include="Controllers\HomeHeroController.cs" />
@@ -290,6 +291,7 @@
     <Content Include="Views\CodePage\Index.cshtml" />
     <Content Include="Views\CDPNavigation\Index.cshtml" />
     <Content Include="Views\CDPIdentification\GetIdentification.cshtml" />
+    <Content Include="Views\CDPPersonProfile\Index.cshtml" />
     <None Include="Views\web.config" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">

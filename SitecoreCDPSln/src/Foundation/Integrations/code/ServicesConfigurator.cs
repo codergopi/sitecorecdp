@@ -18,6 +18,9 @@ namespace SitecoreCDP.Foundation.Integrations
 
             serviceCollection.Replace(ServiceDescriptor.Transient(typeof(IdentityServiceController),
                 typeof(IdentityServiceController)));
+
+            serviceCollection.Replace(ServiceDescriptor.Transient(typeof(GuestIdentifierController),
+                typeof(GuestIdentifierController)));
         }
     }
 }

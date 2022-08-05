@@ -1,0 +1,30 @@
+﻿<div>
+    <input type="hidden" id="profileInfoHdn" name="pageInfoHdn"
+           value="" />
+    Anynymouse User
+</div>
+<script type="text/javascript">
+
+
+    window.onload = function () {
+        loadProfileData();
+    };
+
+    function loadProfileData() {
+
+        var browserId = Boxever.getID();
+        // Creating Our XMLHttpRequest object 
+        var xhr = new XMLHttpRequest();
+
+        var url = 'https://sitecorecdp.local/api/getguestdata/' + browserId;
+
+        // function execute after request is successful 
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText);
+            }
+        }
+        // Sending our request 
+        xhr.send();
+    }
+</script>
