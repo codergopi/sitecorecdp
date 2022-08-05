@@ -279,6 +279,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BoxeverServiceController.cs" />
+    <Compile Include="Controllers\IdentityServiceController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicesConfigurator.cs" />
   </ItemGroup>
@@ -297,6 +298,13 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\IdentityService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Feature\Components\code\SitecoreCDP.Feature.Components.csproj">
+      <Project>{3B1A2A36-BB43-409B-A355-C3008E565172}</Project>
+      <Name>SitecoreCDP.Feature.Components</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

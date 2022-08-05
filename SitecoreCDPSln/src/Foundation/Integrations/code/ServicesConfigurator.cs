@@ -15,6 +15,9 @@ namespace SitecoreCDP.Foundation.Integrations
         {
             serviceCollection.Replace(ServiceDescriptor.Transient(typeof(BoxeverServiceController),
                 typeof(BoxeverServiceController)));
+
+            serviceCollection.Replace(ServiceDescriptor.Transient(typeof(IdentityServiceController),
+                typeof(IdentityServiceController)));
         }
     }
 }

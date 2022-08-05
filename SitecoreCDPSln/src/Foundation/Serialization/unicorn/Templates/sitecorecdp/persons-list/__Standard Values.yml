@@ -1,0 +1,37 @@
+﻿---
+ID: "9b1d033b-64df-4c43-9633-0a572778b538"
+Parent: "000a5622-c393-4563-a194-c724d815d61c"
+Template: "000a5622-c393-4563-a194-c724d815d61c"
+Path: "/sitecore/templates/Project/sitecorecdp/persons-list/__Standard Values"
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{FBEE9FC8-9CD8-42EC-B04B-6C7A17B574C6}">
+        <r
+          id="{E89188B6-C05E-4BF4-A484-F8C6124342CF}"
+          ph="cdp-main"
+          uid="{E732C3F3-C176-4A6F-BA7B-3392B2013F68}" />
+        <r
+          id="{1C626537-5F75-4A2B-8300-E9AA568F5253}"
+          ph="cdp-main"
+          uid="{70842A7D-97FB-4AA0-BCE3-EEB239D37EA4}" />
+        <r
+          id="{35291B98-98BE-43BE-BA9A-17471FB38D6D}"
+          ph="cdp-main"
+          uid="{5D30FA99-713D-4638-83A6-F326D99BD833}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220805T033550Z

@@ -270,6 +270,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CDPIdentificationController.cs" />
     <Compile Include="Controllers\CDPNavigationController.cs" />
     <Compile Include="Controllers\CodeContentController.cs" />
     <Compile Include="Controllers\CodePageController.cs" />
@@ -278,6 +279,7 @@
     <Compile Include="Models\MainLink.cs" />
     <Compile Include="Models\MainNavigationModel.cs" />
     <Compile Include="Models\SubLink.cs" />
+    <Compile Include="Models\VisitorIdentity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -287,6 +289,7 @@
     <Content Include="Views\TabContent\Index.cshtml" />
     <Content Include="Views\CodePage\Index.cshtml" />
     <Content Include="Views\CDPNavigation\Index.cshtml" />
+    <Content Include="Views\CDPIdentification\GetIdentification.cshtml" />
     <None Include="Views\web.config" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">

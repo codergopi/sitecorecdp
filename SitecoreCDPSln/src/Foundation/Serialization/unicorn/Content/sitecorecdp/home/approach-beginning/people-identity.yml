@@ -1,0 +1,25 @@
+﻿---
+ID: "c3fcf88b-e235-4228-9bbb-953988ffeb2f"
+Parent: "e0e68ff3-aea7-4fc9-b187-8108f834194e"
+Template: "000a5622-c393-4563-a194-c724d815d61c"
+Path: "/sitecore/content/sitecorecdp/home/approach-beginning/people-identity"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: People Identity
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: "people-identity"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220805T030335Z

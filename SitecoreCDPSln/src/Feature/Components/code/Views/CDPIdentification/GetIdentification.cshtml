@@ -1,0 +1,54 @@
+﻿@model SitecoreCDP.Feature.Components.Models.VisitorIdentity
+
+@using (Html.BeginForm())
+{
+    <div>
+        <div class="mb-3">
+            <label for="@Model.FirstName" class="form-label">@Model.FirstName</label>
+            <input class="form-control" id="@Model.FirstName">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.LastName" class="form-label">@Model.LastName</label>
+            <input class="form-control" id="@Model.LastName">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.Email" class="form-label">@Model.Email</label>
+            <input class="form-control" id="@Model.Email">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.Gender" class="form-label">@Model.Gender</label>
+            <input class="form-control" id="@Model.Gender">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.Dob" class="form-label">@Model.Dob</label>
+            <input class="form-control" id="@Model.Dob">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.PassportNumber" class="form-label">@Model.PassportNumber</label>
+            <input class="form-control" id="@Model.PassportNumber">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.Mobile" class="form-label">@Model.Mobile</label>
+            <input class="form-control" id="@Model.Mobile">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.Street" class="form-label">@Model.Street</label>
+            <input class="form-control" id="@Model.Street">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.City" class="form-label">@Model.City</label>
+            <input class="form-control" id="@Model.City">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.Country" class="form-label">@Model.Country</label>
+            <input class="form-control" id="@Model.Country">
+        </div>
+        <div class="mb-3">
+            <label for="@Model.PostalCode" class="form-label">@Model.PostalCode</label>
+            <input class="form-control" id="@Model.PostalCode">
+        </div>
+        <div class="mb-3">
+            <input  type="button" class="form-control btn btn-primary" id="btnSubmitIdentityForm">
+        </div>
+    </div>
+}
