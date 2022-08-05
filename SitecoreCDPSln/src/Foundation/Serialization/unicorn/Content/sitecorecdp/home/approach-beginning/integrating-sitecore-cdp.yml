@@ -1,0 +1,271 @@
+﻿---
+ID: "fd64fda9-abc7-4d6d-80ad-4bb44038111d"
+Parent: "e0e68ff3-aea7-4fc9-b187-8108f834194e"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/approach-beginning/integrating-sitecore-cdp"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: Integrating in Sitecore CDP
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Value: "20220805T060051:637952760517555114Z"
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        <div class="titlepage" style="color: #555555; background-color: #ffffff;">
+        <div>
+        <div class="title" style="margin: 0em 0px 1em;">
+        <h1 class="title" style="color: inherit; margin: 0em 0px 1em; line-height: 1.1;">JavaScript tagging examples for webpages</h1>
+        </div>
+        <div>&nbsp;</div>
+        </div>
+        </div>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">You&nbsp;<a class="link" title="Release notes for JavaScript library" style="color: #006f7c; background-color: transparent;">activate the Boxever Library</a>&nbsp;using a small snippet of JavaScript code that you paste into your webpages. It enables the Sitecore Customer Data Platform (CDP) to capture Guest behavior by inserting&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">boxever-min.js</code>&nbsp;into the webpage.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">After you activate the Boxever JavaScript library, you can start sending data to the Events API using the client data layer, Document Object Model (DOM), or both. This topic provides tagging examples for the three options.</p>
+        <section dir="ltr" class="section accordion accordion;" data-publication-date="07/25/22" style="color: #555555; background-color: #ffffff;">
+        <div class="panel panel-default" style="margin-top: 1.5em; margin-bottom: 22px; border: 0.5px solid #e4e4e4;">
+        <div class="panel-heading active" style="color: #333333; background-color: transparent; padding: 0.5em 1em; border-bottom: none; border-left-color: #dddddd; border-right-color: #dddddd; border-top-color: #dddddd;">
+        <div class="titlepage"><a data-toggle="collapse" data-parent="#UUID-b1fab377-c315-c9ce-3717-f1dc0b40d573_section-idm4635544702273632949083238682" style="color: #006f7c; background-color: transparent;"></a>
+        <div><a data-toggle="collapse" data-parent="#UUID-b1fab377-c315-c9ce-3717-f1dc0b40d573_section-idm4635544702273632949083238682" style="color: #006f7c; background-color: transparent;"></a>
+        <div class="title"><a data-toggle="collapse" data-parent="#UUID-b1fab377-c315-c9ce-3717-f1dc0b40d573_section-idm4635544702273632949083238682" style="color: #006f7c; background-color: transparent;">
+        </a>
+        <h2 class="title" style="color: inherit; margin: 10px 0px 5px; padding-bottom: 18px; border-bottom: 0px; line-height: 1.1;"><a data-toggle="collapse" data-parent="#UUID-b1fab377-c315-c9ce-3717-f1dc0b40d573_section-idm4635544702273632949083238682" style="color: #006f7c; background-color: transparent;">Activating the JavaScript library</a></h2>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="panel-body collapse in" style="margin-left: 10px; padding: 0em 1em 2em;">
+        <p style="margin-right: 0px; margin-bottom: 1.4em; margin-left: 0px;">To activate the JavaScript library on your webpages, copy and paste the following snippet before the closing tag in the website template page. Details of the attributes to replace, along with example values, are included in the accompanying table.&nbsp;</p>
+        <p style="margin-right: 0px; margin-bottom: 1.4em; margin-left: 0px;">&nbsp;</p>
+        </div>
+        </div>
+        </section>
+        <div>
+        <p style="color: #555555; background-color: #ffffff; margin-right: 0px; margin-bottom: 1.4em; margin-left: 0px;">The following table describes the attributes to replace in the provided code example.</p>
+        <div class="informaltable table-responsive" style="color: #555555; background-color: #ffffff; margin-bottom: 2em; border: none;">
+        <table class="informaltable frame-void rules-rows" style="background-color: transparent; width: 1066.09px; border-spacing: 0px; border-top: 1px solid black; border-left: 1px solid black; border-right-color: black; border-bottom-color: black; border-right-style: solid; border-bottom-style: solid;">
+            <thead>
+                <tr style="background: #f2f2f2;">
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Attribute to replace</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Description</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Type</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Example</p>
+                    </th>
+                    <th class="th" style="background: white; padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-style: solid; border-left-style: solid; text-align: start;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required/optional</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">{{client_key}}</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Your organization's unique identifier that is used to authenticate the client when it receives API calls. You can identify your organization's<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">client_key</code>in<span class="guilabel">System Settings</span>for<a class="link" data-olink="true" href="https://doc.sitecore.com/cdp/en/users/sitecore-cdp/en/managing-sitecore-cdp-system-settings.html" style="color: #006f7c; background-color: transparent;">Sitecore CDP</a>or<a class="link" data-olink="true" href="https://doc.sitecore.com/cdp/en/users/sitecore-personalize/en/managing-accounts-and-system-settings-in-sitecore-personalize.html" style="color: #006f7c; background-color: transparent;">Sitecore Personalize</a>.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">'ZpHxO9WvLOfQRVPlvo0BqB8YjGYuFfNe'</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">{{target}}</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">This is the API target endpoint for Sitecore CDP and Sitecore Personalize. This ensures that events are successfully sent to Sitecore CDP by the Sitecore CDP Stream API.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <div class="itemizedlist">
+                    <ul class="itemizedlist" style="margin: 0px 0px 1.4em; padding-left: 40px; list-style-image: initial;">
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Europe:<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;"> 'https://api.boxever.com/v1.2'</code></p>
+                        </li>
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Asia Pacific:<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">'https://api-ap-southeast-2-production.boxever.com/v1.2'</code></p>
+                        </li>
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">United States:<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">'https://api-us.boxever.com/v1.2'</code></p>
+                        </li>
+                    </ul>
+                    </div>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">{{cookie_domain}}</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">This is the top-level cookie domain of the website that you are integrating. Ensure that you include the period at the domain root. This ensures that Sitecore CDP (Boxever) cookie is stored as a first-party cookie.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">'.myretailsite.com'</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Optional</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">{{javascriptLibraryVersion}}</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">This is the version of the Boxever JavaScript library. The<a class="link" title="Release notes for JavaScript library" style="color: #006f7c; background-color: transparent;">Release Notes JS Library</a>provides the versions for<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">{{clientVersion}}</code>.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">number</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">1.4.8</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Optional</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">{{pointOfSale}}</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px;">This is the<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">pointOfSale</code>configured for the tenant. This ensures that the:</p>
+                    <div class="itemizedlist">
+                    <ul class="itemizedlist" style="margin: 0px 0px 1.4em; padding-left: 40px; list-style-image: initial;">
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><a class="link" data-olink="true" href="https://doc.sitecore.com/cdp/en/users/sitecore-personalize/en/view-operational-data-for-an-experiment-in-sitecore-personalize.html" style="color: #006f7c; background-color: transparent;"><span class="guilabel">Operational</span>tab</a>for any experiments displays data.</p>
+                        </li>
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><a class="link" data-olink="true" href="https://doc.sitecore.com/cdp/en/users/sitecore-cdp/en/view-guest-event-data-in-sitecore-cdp.html" style="color: #006f7c; background-color: transparent;"><span class="guilabel">Timeline</span>in the guest profile</a>displays the guest's events.</p>
+                        </li>
+                    </ul>
+                    </div>
+                    <p style="margin: 0px 0px 1.5em;">You must ensure the<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">pointOfSale</code>you set here is the same as:</p>
+                    <div class="itemizedlist">
+                    <ul class="itemizedlist" style="margin: 0px 0px 1.4em; padding-left: 40px; list-style-image: initial;">
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The<a class="link" data-olink="true" href="https://doc.sitecore.com/cdp/en/users/sitecore-personalize/en/manage-points-of-sale-in-sitecore-personalize.html" style="color: #006f7c; background-color: transparent;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">pointOfSale</code>you configure</a>in system settings.</p>
+                        </li>
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The<a class="link" data-olink="true" href="https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-1/en/sitecore-cdp-flow-execution-data-model-rest-api.html" style="color: #006f7c; background-color: transparent;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">pointOfSale</code>you send</a>when using the callFlows API.</p>
+                        </li>
+                        <li class="listitem">
+                        <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">The<a class="link" href="https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-0/send-an-event-as-an-http-get-request.html" title="Send an event as an HTTP GET request" style="color: #006f7c; background-color: transparent;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">pos</code>you send in an event</a>using the Stream API.</p>
+                        </li>
+                    </ul>
+                    </div>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">'myretailsite.com'</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">{{web_flow_target}}</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">This is the path for the AmazonCloudFront Content Delivery Network(CDN) for Sitecore Personalize. This ensures that you can preview the experiment. Most tenants use the path provided in the example, with the exception of some third-party integrators. You only need to set this if you have a Sitecore Personalize license and use web experiments or web experiences.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">string</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">'https://d35vb5cccm4xzp.cloudfront.net'</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Optional</p>
+                    </td>
+                </tr>
+                <tr style="background: #f2f2f2;">
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">web_flow_config:{async:true,defer:true }</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">To disable asynchronous loading of Web Experiences library (<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">lib.js</code>), set the<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">async</code>property to false. To defer the loading of scripts until after the DOM is built, set the<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">defer</code>property to false. These settings are facilitated through the Boxever JavaScript library. It loads<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">version.js</code>library to get the latest version and then loads<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">lib.js</code>library. Setting these properties to false can impact page load performance. These properties only apply to organizations that have a Sitecore Personalize license and use web experiments or web experiences.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">boolean</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">web_flow_config:{async:true,defer:true }</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Optional</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">{{clientVersion}}</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">This is the version of the Boxever JavaScript library. The<a class="link" title="Release notes for JavaScript library" style="color: #006f7c; background-color: transparent;">Release Notes JS Library</a>provides the most recent version for<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">{{clientVersion}}</code>.</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">number</p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;"><code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">1.4.8</code></p>
+                    </td>
+                    <td class="td" style="padding: 8px; border-right: 1px solid black; border-bottom: 1px solid black; border-left-color: black; border-top-color: #000000; border-top-style: solid; border-left-style: solid; text-align: left;">
+                    <p style="margin-right: 0px; margin-bottom: 0em; margin-left: 0px;">Required</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <h6 id="idm45586587156096" class="bridgehead" style="color: #555555; background-color: #ffffff; margin-top: 11px; margin-bottom: 11px; line-height: 1.1;">Using asynchronous syntax to create a queue</h6>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">_boxeverq</code>&nbsp;object makes using asynchronous syntax to create a queue possible. It acts as a queue, which is a first-in, first-out data structure that collects function calls until&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">boxever-min.js</code>&nbsp;is ready to run them.</p>
+        <h6 id="idm45586587154384" class="bridgehead" style="color: #555555; background-color: #ffffff; margin-top: 11px; margin-bottom: 11px; line-height: 1.1;">Pushing functions into the queue</h6>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">Functions run in the order that they are pushed into the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">_boxeverq</code>&nbsp;object. To add something to the queue, use the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">_boxeverq.push</code>&nbsp;method. Functions can contain any arbitrary JavaScript. This technique is useful for chaining calls to the API. For example, ensuring that a PAYMENT event runs before a CHECKOUT event.</p>
+        <p style="color: #555555; background-color: #ffffff; margin: 0px 0px 1.4em;">The following is an example of how to send a raw event to the Event API. It effectively sends search data to the Sitecore CDP by creating the&nbsp;<code class="code" style="color: inherit; background: transparent; padding: 2px 4px; border: none;">searchEvent</code>&nbsp;tracker object and sends it to Sitecore CDP using the Boxever library object.</p>
+        <pre style="color: #000000; background: #ffffff; margin: 15px; padding: 0.5em; border: none; line-height: 1.4;"><span class="hljs-comment" style="color: #880000;">// Place an anonymous function in the Boxever queue </span> _boxeverq.push(<span class="hljs-function"><span class="hljs-keyword" style="color: #000088;">function</span>() </span>{ <span class="hljs-keyword" style="color: #000088;">var</span> searchEvent = { <span class="hljs-string" style="color: #008800;">"browser_id"</span>: Boxever.getID(), <span class="hljs-string" style="color: #008800;">"channel"</span>: <span class="hljs-string" style="color: #008800;">"WEB"</span>, <span class="hljs-string" style="color: #008800;">"type"</span>: <span class="hljs-string" style="color: #008800;">"SEARCH"</span>, <span class="hljs-string" style="color: #008800;">"language"</span>: <span class="hljs-string" style="color: #008800;">"EN"</span>, <span class="hljs-string" style="color: #008800;">"currency"</span>: <span class="hljs-string" style="color: #008800;">"EUR"</span>, <span class="hljs-string" style="color: #008800;">"page"</span>: <span class="hljs-string" style="color: #008800;">"/home"</span>, <span class="hljs-string" style="color: #008800;">"pos"</span>: <span class="hljs-string" style="color: #008800;">"spinair.com"</span>, <span class="hljs-string" style="color: #008800;">"product_name"</span>: <span class="hljs-string" style="color: #008800;">"DUB-LHR"</span>, <span class="hljs-string" style="color: #008800;">"product_type"</span>: <span class="hljs-string" style="color: #008800;">"DUB-LHR|Economy|Flex"</span> }; <span class="hljs-comment" style="color: #880000;">// Invoke event create </span> <span class="hljs-comment" style="color: #880000;">// (&lt;event msg&gt;, &lt;callback function&gt;, &lt;format&gt;)</span> Boxever.eventCreate(searchEvent, <span class="hljs-function"><span class="hljs-keyword" style="color: #000088;">function</span>(<span class="hljs-params" style="color: #660066;">data</span>)</span>{}, <span class="hljs-string" style="color: #008800;">'json'</span>); });</pre>
+        <div class="panel-heading active" style="color: #333333; padding: 0.5em 1em; border-bottom: none; border-left-color: #dddddd; border-right-color: #dddddd; border-top-color: #dddddd;">
+        <div class="titlepage"><a data-toggle="collapse" data-parent="#UUID-b1fab377-c315-c9ce-3717-f1dc0b40d573_section-idm4647521638166432453987582243" style="color: #006f7c;"></a>
+        <div><a data-toggle="collapse" data-parent="#UUID-b1fab377-c315-c9ce-3717-f1dc0b40d573_section-idm4647521638166432453987582243" style="color: #006f7c;"></a>
+        <div class="title"><a data-toggle="collapse" data-parent="#UUID-b1fab377-c315-c9ce-3717-f1dc0b40d573_section-idm4647521638166432453987582243" style="color: #006f7c;">
+        </a>
+        <h2 class="title" style="color: inherit; margin: 10px 0px 5px; padding-bottom: 18px; border-bottom: 0px; line-height: 1.1;"><a data-toggle="collapse" data-parent="#UUID-b1fab377-c315-c9ce-3717-f1dc0b40d573_section-idm4647521638166432453987582243" style="color: #006f7c;">Sending data from the client data layer to the Events API</a></h2>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="panel-body collapse in" id="sending-data-from-the-client-data-layer-to-the-events-api_body" style="color: #555555; margin-left: 10px; padding: 0em 1em 2em;">
+        <p style="margin-right: 0px; margin-bottom: 1.4em; margin-left: 0px;">The following is an example of a tag you can use to invoke Sitecore CDP events to send data from the client data layer to Sitecore CDP.</p>
+        </div>
+        <pre style="color: #000000; background: #ffffff; margin: 15px; padding: 0.5em; border: none; line-height: 1.4;"><span class="hljs-comment" style="color: #880000;">// Client data layer as defined by the client e-commerce platform</span> <span class="hljs-keyword" style="color: #000088;">var</span> ClientDataLayer = { <span class="hljs-string" style="color: #008800;">"currencyCode"</span>: <span class="hljs-string" style="color: #008800;">"EUR"</span>, <span class="hljs-string" style="color: #008800;">"lang"</span>: <span class="hljs-string" style="color: #008800;">"en"</span>, <span class="hljs-string" style="color: #008800;">"page"</span>: <span class="hljs-string" style="color: #008800;">"/homepage"</span> }; <span class="hljs-comment" style="color: #880000;">// Place an anonymous function in the Boxever queue </span> _boxeverq.push(<span class="hljs-function"><span class="hljs-keyword" style="color: #000088;">function</span>() </span>{ <span class="hljs-keyword" style="color: #000088;">var</span> searchEvent = { <span class="hljs-string" style="color: #008800;">"browser_id"</span>: Boxever.getID(), <span class="hljs-string" style="color: #008800;">"channel"</span>: <span class="hljs-string" style="color: #008800;">"WEB"</span>, <span class="hljs-string" style="color: #008800;">"type"</span>: <span class="hljs-string" style="color: #008800;">"SEARCH"</span>, <span class="hljs-string" style="color: #008800;">"language"</span>: ClientDataLayer.lang.toUpperCase(), <span class="hljs-string" style="color: #008800;">"currency"</span>: ClientDataLayer.currencyCode, <span class="hljs-string" style="color: #008800;">"page"</span>: ClientDataLayer.page, <span class="hljs-string" style="color: #008800;">"pos"</span>: <span class="hljs-string" style="color: #008800;">"spinair.com"</span>, <span class="hljs-string" style="color: #008800;">"product_name"</span>: <span class="hljs-string" style="color: #008800;">"DUB-LHR"</span>, <span class="hljs-string" style="color: #008800;">"product_type"</span>: <span class="hljs-string" style="color: #008800;">"DUB-LHR|Economy|Flex"</span> }; <span class="hljs-comment" style="color: #880000;">// Invoke event create </span> <span class="hljs-comment" style="color: #880000;">// (&lt;event msg&gt;, &lt;callback function&gt;, &lt;format&gt;)</span> Boxever.eventCreate(searchEvent, <span class="hljs-function"><span class="hljs-keyword" style="color: #000088;">function</span>(<span class="hljs-params" style="color: #660066;">data</span>)</span>{}, <span class="hljs-string" style="color: #008800;">'json'</span>); });</pre>
+        &nbsp;</div>
+    - ID: "64913f60-6730-40a7-ae14-ae9b8d425009"
+      Hint: contentImage
+      Value: |
+        <image mediaid="{4A6D92B3-41C6-43A1-B073-A54E1EDC0DFD}" />

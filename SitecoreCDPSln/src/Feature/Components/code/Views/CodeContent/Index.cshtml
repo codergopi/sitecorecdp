@@ -22,14 +22,11 @@
 <script type="text/javascript">
 
     window.onload = function () {
-        //triggerEventOnView();
+        triggerEventOnView();
     };
 
-    //Trigger Search Event - Queue Push
     function triggerEventOnView() {
-        // Place an anonymous function in the Boxever queue
         _boxeverq.push(function () {
-
             var viewEvent = {
                 "channel": "WEB",
                 "type": "VIEW",
@@ -41,10 +38,30 @@
             }
             //Add UTM params
             viewEvent = Boxever.addUTMParams(viewEvent);
-            // Invoke event create
-            // (<event msg>, <callback function>, <format>)
             Boxever.eventCreate(viewEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
         });
     }
+
+    ////Trigger Search Event - Queue Push
+    //function triggerEventOnView() {
+    //    // Place an anonymous function in the Boxever queue
+    //    _boxeverq.push(function () {
+
+    //        var viewEvent = {
+    //            "channel": "WEB",
+    //            "type": "VIEW",
+    //            "language": "EN",
+    //            "currency": "EUR",
+    //            "page": document.getElementById('pageInfoHdn').value,
+    //            "pos": window._boxever_settings.pointOfSale,
+    //            "browser_id": Boxever.getID()
+    //        }
+    //        //Add UTM params
+    //        viewEvent = Boxever.addUTMParams(viewEvent);
+    //        // Invoke event create
+    //        // (<event msg>, <callback function>, <format>)
+    //        Boxever.eventCreate(viewEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
+    //    });
+    //}
 
 </script>
