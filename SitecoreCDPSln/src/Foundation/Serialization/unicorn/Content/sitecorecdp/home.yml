@@ -4,6 +4,23 @@ Parent: "e40c947d-0116-4349-affa-7d9d1f3ede45"
 Template: "24c09624-4b8e-439c-bef3-0229da44c9dc"
 Path: /sitecore/content/sitecorecdp/home
 DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{2044B2A4-FB14-4DF7-9BB0-4A06CA5237A5}"
+          s:ccb="Clear on publish"
+          s:ds="{9C5F6BBB-98F6-401C-B8DF-B7FBCAA954D1}"
+          s:id="{1C626537-5F75-4A2B-8300-E9AA568F5253}"
+          s:par="" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Fields:

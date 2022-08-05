@@ -14,28 +14,7 @@
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/owl.carousel.css" rel="stylesheet" />
     <link href="~/Content/owl.theme.default.min.css" rel="stylesheet" />
-    <script type="text/javascript">
-        // Define the Boxever queue
-        var _boxeverq = _boxeverq || [];
 
-        // Define the Boxever settings
-        var _boxever_settings = {
-            client_key: 'pqsmpg99hzkfe1za3socuk3x1d6cvv69', // Replace with your client key
-            target: 'https://api.boxever.com/v1.2', // Replace with your API target endpoint specific to your data center region
-            cookie_domain: 'sitecorecdp.local', // Replace with the top level cookie domain of the website that is being integrated e.g ".example.com" and not "www.example.com"
-            web_flow_target: 'https://d35vb5cccm4xzp.cloudfront.net',
-            pointOfSale: 'BootCamp_MVC_CDP'
-        };
-        // Import the Boxever library asynchronously
-        (function () {
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = 'https://d1mj578wat5n4o.cloudfront.net/boxever-1.4.8.min.js';
-            var x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-        })();
-    </script>
 </head>
 <body>
     <div>
@@ -161,6 +140,9 @@
 
             $("#btnSearchViaHttp").click(function () {
                 addEventViaXmlHttp();
+            });
+            $("#btnSubmitIdentityForm").click(function () {
+                submitIdentityToServer();
             });
         });
 
@@ -306,6 +288,50 @@
                 return sendIdentityEvent();
             });
         });
+
+        function submitIdentityToServer() {
+            var fName = document.getElementById("textFirstName").value;
+            var lName = document.getElementById("textLastName").value;
+            var email = document.getElementById("textEmail").value;
+            var gender = document.getElementById("textGender").value;
+            var dob = document.getElementById("textDob").value;
+            var passportno = document.getElementById("textPassportNumber").value;
+            var mobile = document.getElementById("textMobile").value;
+            var street = document.getElementById("textStreet").value;
+            var city = document.getElementById("textCity").value;
+            var country = document.getElementById("textCountry").value;
+            var postalcode = document.getElementById("textPostalCode").value;
+
+            var eventToSendRevised = {
+                "channel": "WEB",
+                "type": "IDENTITY",
+                "language": "EN",
+                "currency": "EUR",
+                "page": "IdentityPage",
+                "pos": "BootCamp_MVC_CDP",
+                "browser_id": Boxever.getID(),
+                "email": email,
+                "title": "Mr",
+                "firstname": fName,
+                "lastname": lName,
+                "gender": gender,
+                "dob": "1980-01-23T00:00",
+                "passport_no": passportno,
+                "mobile": mobile,
+                "phone": street,
+                "street": ["41 Viridian Square", "Walton Street", "Aylesbury"],
+                "city": city,
+                "country": country,
+                "postal_code": postalcode,
+                "identifiers": [{
+                    "provider": "BXLP",
+                    "id": "123456"
+                }]
+            };
+            Boxever.eventCreate(eventToSendRevised, function (data) { }, 'json');
+            alert("Thanks :" + fName + " " + lName + "\n Confirmation will be sent to " + email);
+            return false;
+        }
 
         function sendIdentityEvent() {
             var fName = document.getElementById("txtFName").value;

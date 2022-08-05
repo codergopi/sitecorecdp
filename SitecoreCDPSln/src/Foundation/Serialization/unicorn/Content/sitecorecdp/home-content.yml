@@ -1,0 +1,81 @@
+﻿---
+ID: "9c5f6bbb-98f6-401c-b8df-b7fbcaa954d1"
+Parent: "e40c947d-0116-4349-affa-7d9d1f3ede45"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home-content"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: CDP Introduction
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220805T034241Z
+    - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
+      Hint: content
+      Value: |
+        <div class="component chapter-wrapper" id="chapter1" data-component-name="Article Section" style="color: #000000; background-color: #ffffff;">
+        <h2 style="color: #232323; margin-top: 0px; margin-bottom: 30px; line-height: normal;">What is a CDP and how will it benefit your organization?</h2>
+        <div class="component" data-component-name="Article Text" style="color: var(--font-color);">
+        <p style="color: var(--font-color); margin-bottom: 30px; line-height: 1.5em;">The CDP, or customer data platform is one of martech&rsquo;s most powerful tools. A data-crunching dynamo, it is responsible for building customer experiences that truly resonate. By bringing together multiple data sets and creating a single customer view, the CDP shapes highly personalized digital interactions that are delivered to the right person, on the right device, at precisely the right time.</p>
+        <h3 style="color: #232323; margin-top: 0px; margin-bottom: 15px; line-height: normal;">So, technically speaking, what constitutes a CDP?</h3>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;"><a rel="noopener noreferrer" href="https://www.cdpinstitute.org/learning-center/what-is-a-cdp/#:~:text=The%20CDP%20is%20packaged%20software,change%20as%20new%20needs%20arise.#:~:text=The%20CDP%20is%20packaged%20software,change%20as%20new%20needs%20arise." target="_blank" style="color: #5548d9; background-color: transparent; border: none;">The CDP Institute</a>&nbsp;defines a CDP as follows:</p>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">&ldquo;packaged software that creates a persistent, unified customer database that is accessible to other systems.&rdquo;</p>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">If we examine this definition in more detail, &ldquo;packaged software&rdquo; refers to software managed internally by organizations. Typically, CDP software requires very little support from IT departments, meaning marketing teams can plan and execute personalized marketing campaigns quickly and easily.</p>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">The CDP&rsquo;s &ldquo;persistent, unified customer database&rdquo; provides a 360-degree view of each customer by gathering data from multiple systems, linking information related to the same customer and storing the information so that customer behavior can be tracked over time. As a result, individual profiles are always up to date.</p>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">The fact that data stored in the CDP is &ldquo;accessible to other systems&rdquo; means closer alignment across departments is possible. Data stored in the CDP can be used by other systems for analysis and to manage customer interactions.</p>
+        </div>
+        </div>
+        <div class="component chapter-wrapper" id="chapter2" data-component-name="Article Section" style="color: #000000; background-color: #ffffff;">
+        <p class="eyebrow" style="color: var(--font-color); margin-bottom: 30px; letter-spacing: 1.5pt; line-height: 1.5em;">CHAPTER 2</p>
+        <h2 style="color: #232323; margin-top: 0px; margin-bottom: 30px; line-height: normal;">Identifying why your organization might need a CDP</h2>
+        <div class="component" data-component-name="Article Text" style="color: var(--font-color);">
+        <p style="color: var(--font-color); margin-bottom: 30px; line-height: 1.5em;">One of the easiest ways to get buy-in from senior management within your organization is by identifying a problem &ndash; or a range of problems, that a CDP can easily solve. The following are some of the most common use cases for a CDP:</p>
+        <ul style="color: var(--font-color); margin-top: 0px; margin-bottom: 1rem; margin-left: 0px; padding-left: 30px; list-style-type: none; list-style-image: initial;">
+            <li style="margin-bottom: 5px; padding-bottom: 10px; padding-left: 0px; line-height: 1.5;">You need to connect data collected by your organization that is currently siloed and underutilized</li>
+            <li style="margin-bottom: 5px; padding-bottom: 10px; padding-left: 0px; line-height: 1.5;">You need to get a 360-degree understanding of your customers and their customer journey</li>
+            <li style="margin-bottom: 5px; padding-bottom: 10px; padding-left: 0px; line-height: 1.5;">Your organization wants to offer a more intuitive, personalized experience on your website and digital channels</li>
+            <li style="margin-bottom: 5px; padding-bottom: 10px; padding-left: 0px; line-height: 1.5;">You need to reduce ad spend and create targeted, multichannel advertising campaigns</li>
+            <li style="margin-bottom: 5px; padding-bottom: 10px; padding-left: 0px; line-height: 1.5;">You need to combine online and offline data</li>
+            <li style="margin-bottom: 5px; padding-bottom: 10px; padding-left: 0px; line-height: 1.5;">Your organization wants to future-proof its data management processes in compliance with GDPR and CCPA</li>
+            <li style="margin-bottom: 5px; padding-bottom: 10px; padding-left: 0px; line-height: 1.5;">You want to cross-sell and up-sell products</li>
+        </ul>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">Once you have established why your organization needs a CDP, the next step in building your business case should focus on how the CDP will integrate with your organization&rsquo;s existing martech stack.</p>
+        </div>
+        </div>
+        <div class="component chapter-wrapper" id="chapter3" data-component-name="Article Section" style="color: #000000; background-color: #ffffff;">
+        <p class="eyebrow" style="color: var(--font-color); margin-bottom: 30px; letter-spacing: 1.5pt; line-height: 1.5em;">CHAPTER 3</p>
+        <h2 style="color: #232323; margin-top: 0px; margin-bottom: 30px; line-height: normal;">The beating heart of your martech stack</h2>
+        <div class="component" data-component-name="Article Text" style="color: var(--font-color);">
+        <p style="color: var(--font-color); margin-bottom: 30px; line-height: 1.5em;">In order to produce standout customer experiences, your organization&rsquo;s martech stack should be built on a strong foundation that collects and interprets only the most accurate, up-to-date customer data. The good news is today&rsquo;s CDPs are designed to plug seamlessly into existing martech applications.</p>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">Consider a CDP as the &ldquo;beating heart&rdquo; of your martech stack. Sitting right at the center, this centralized hub gathers, segments, and identifies data from multiple online and offline data sources, and unifies this data to create a single, 360-degree view of the customer. As well as ingesting and managing data, the latest CDPs also employ decisioning, experimentation, and personalization capabilities so that discounts, push notifications, or other relevant content can be delivered to customers in an intuitive way on the right device at the right time.</p>
+        </div>
+        </div>
+        <div class="component chapter-wrapper" id="chapter4" data-component-name="Article Section" style="color: #000000; background-color: #ffffff;">
+        <p class="eyebrow" style="color: var(--font-color); margin-bottom: 30px; letter-spacing: 1.5pt; line-height: 1.5em;">CHAPTER 4</p>
+        <h2 style="color: #232323; margin-top: 0px; margin-bottom: 30px; line-height: normal;">Cost savings</h2>
+        <div class="component" data-component-name="Article Text" style="color: var(--font-color);">
+        <p style="color: var(--font-color); margin-bottom: 30px; line-height: 1.5em;">The cost savings associated with the CDP are one of its biggest selling points. As a multi-tasking powerhouse, the CDP drives significant savings across a range of teams. Sales and digital marketing teams can access insights, automate customer journeys, and use advanced segmentation to minimize advertising spend, while product managers and customer experience teams can examine customer feedback, determine user engagement, and identify potential improvements.</p>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">According to a&nbsp;<a rel="noopener noreferrer" href="https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/the-future-of-personalization-and-how-to-get-ready-for-it" target="_blank" style="color: #5548d9; background-color: transparent; border: none;">McKinsey survey of marketing leaders</a>, personalized campaigns and customer experiences triggered by customer data can drive revenue up by 15% and increase marketing-spend efficiency by up to 30%.</p>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">In addition, multiple teams using the same tool and dataset means the CDP eliminates data silos and allows teams to access and leverage customer data across departments accurately and effectively. Not only does this save time and costs related to training and managing multiple vendors, but it also reduces the potential for error, and ultimately, places the customer at the center of your organization &ndash; the end goal for any marketer.</p>
+        </div>
+        </div>
+        <div class="component chapter-wrapper" id="chapter5" data-component-name="Article Section" style="color: #000000; background-color: #ffffff;">
+        <p class="eyebrow" style="color: var(--font-color); margin-bottom: 30px; letter-spacing: 1.5pt; line-height: 1.5em;">CHAPTER 5</p>
+        <h2 style="color: #232323; margin-top: 0px; margin-bottom: 30px; line-height: normal;">Customer loyalty and ROI</h2>
+        <div class="component" data-component-name="Article Text" style="color: var(--font-color);">
+        <p style="color: var(--font-color); margin-bottom: 30px; line-height: 1.5em;">Revenue growth strategies based on customer behavior are much more likely to result in long-term customer loyalty. In fact, according to Salesforce&rsquo;s&nbsp;<a rel="noopener noreferrer" href="https://www.salesforce.com/resources/research-reports/state-of-the-connected-customer/" target="_blank" style="color: #5548d9; background-color: transparent; border: none;">State of the Connected Customer</a>&nbsp;report, 70% of consumers say a company&rsquo;s understanding of their personal needs influences their loyalty. With a CDP in place, organizations can easily lean into trends revealed by customer behavior that may otherwise go undetected or underexploited.</p>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">By identifying common drop-off points in the customer journey, organizations can adjust their strategies to reduce churn and increase revenue by targeting customers who are likely to spend more, spend more often or purchase ancillary products.</p>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">From marketing, to sales, to e-commerce, the beauty of the CDP is that teams across your organization can use CDP-powered analytics and reporting tools to gather insights on the impact of their activities on overall revenue.</p>
+        <h3 style="color: #232323; margin-top: 0px; margin-bottom: 15px; line-height: normal;">The Sitecore CDP</h3>
+        <p style="color: var(--font-color); margin-top: 0px; margin-bottom: 30px; line-height: 1.5em;">The&nbsp;<a href="https://www.sitecore.com/products/customer-data-platform" style="color: #5548d9; background-color: transparent; border: none;">Sitecore CDP</a>&nbsp;is an advanced customer data platform that combines the core data management capabilities of a CDP with intelligent decisioning, predictive analytics, experimentation, and orchestration capabilities so that you can surprise and delight your customers with meaningful, personalized experiences at every step of their journey.</p>
+        </div>
+        </div>
+    - ID: "64913f60-6730-40a7-ae14-ae9b8d425009"
+      Hint: contentImage
+      Value: |
+        <image mediaid="{1BC50AB6-3566-472F-835F-03493E584F75}" />
