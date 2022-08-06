@@ -142,7 +142,7 @@
                 pos: window._boxever_settings.pointOfSale,
                 type: "FORCE_CLOSE",
                 _bx_extended_message: "1"
-            };  
+            };
 
             Boxever.eventCreate(closeSessionEvent, function (data) { }, 'json');
         }
@@ -166,7 +166,7 @@
             });
             $("#btnAddToCart").click(function () {
                 addEventForAccilaryProduct();
-                        });
+            });
             $("#btnCheckOut").click(function () {
                 addEventForCheckoutSuccess();
             });
@@ -179,7 +179,194 @@
             $("#btnOrderCompletion").click(function () {
                 addEventForOrderCompletion();
             });
+            $("#btnAddProductToCart").click(function () {
+                addProductToCartInCDP();
+            });
+            $("#btnConfirmProductInCart").click(function () {
+                ConfirmProductInCart();
+            });
+            $("#btnMakePayment").click(function () {
+                PaymentConfirmationFromCart();
+            });
+            $("#btnCheckOutAfterPayment").click(function () {
+                PurchaseConfirmation();
+            });
+            $("#btnCheckOfferForGuest").click(function () {
+                CheckOfferForGuest();
+            });
         });
+
+        function CheckOfferForGuest() {
+
+            var callFlowsContext = {
+                context: {
+                    "channel": "WEB",   // update before using. e.g. “WEB”
+                    "language": "EN",   // update before using. e.g. “en”
+                    "currencyCode": "EUR",  // update before using. e.g. “EUR”
+                    "pointOfSale": Boxever.pointOfSale, // or value from your data layer
+                    "browserId": Boxever.getID(),
+                    "clientKey": "pqsmpg99hzkfe1za3socuk3x1d6cvv69",
+                    "friendlyId": "flight_availing_experience"
+                }
+            };
+
+            Boxever.callFlows(callFlowsContext, function (response) {
+                alert(JSON.stringify(response));
+            }, 'json');
+
+        }
+
+
+        function CreatingConsumerAndContacts() {
+            _boxeverq.push(function () {
+                var ConsumerData = {
+                    "channel": "WEB",
+                    "type": "ADD_CONSUMERS",
+                    "language": "EN",
+                    "currency": "EUR",
+                    "page": "payment page",
+                    "pos": window._boxever_settings.pointOfSale,
+                    "browser_id": Boxever.getID(),
+                    "consumer": [{
+                        "title": "Mr",
+                        "firstname": "Jack",
+                        "lastname": "Smith",
+                        "dob": "1975-04-23T00:00",
+                        "gender": "male",
+                        "mobile": "+353123456",
+                        "nationality": "Irish",
+                        "reference_id": "1",
+                        "item_id": [
+                            "Introduction to Cosmology",
+                            "Interstellar"
+                        ]
+                    }, {
+                        "title": "Ms",
+                        "firstname": "Lily",
+                        "lastname": "Smith",
+                        "dob": "1980-01-15T00:00",
+                        "gender": "female",
+                        "mobile": "+353123458",
+                        "nationality": "Irish",
+                        "reference_id": "2",
+                        "item_id": [
+                            "Introduction to Cosmology",
+                            "Interstellar"
+                        ]
+                    }]
+                };
+                Boxever.eventCreate(ConsumerData, function (data) { alert(JSON.stringify(data)); }, 'json');
+
+            });
+            _boxeverq.push(function () {
+                var ContactData = {
+                    "channel": "WEB",
+                    "type": "ADD_CONTACTS",
+                    "language": "EN",
+                    "currency": "EUR",
+                    "page": "pim page",
+                    "pos": window._boxever_settings.pointOfSale,
+                    "browser_id": Boxever.getID(),
+                    "contact": [{
+                        "title": "Mr",
+                        "firstname": "Jack",
+                        "lastname": "Smith",
+                        "mobile": "(+353)1234567",
+                        "phone": "(+353)1234568",
+                        "street": ["123 Fake Street"],
+                        "city": "Dublin",
+                        "country_code": "IE",
+                        "postal_code": "1234",
+                        "dob": "1975-04-23T00:00",
+                        "email": "jack.smith@boxever.com",
+                        "gender": "male"
+                    }]
+                };
+                Boxever.eventCreate(ContactData, function (data) { alert(JSON.stringify(data)); }, 'json');
+            });
+        }
+
+        function PurchaseConfirmation() {
+            _boxeverq.push(function () {
+                var productCartToConfirm = {
+                    "channel": "WEB",
+                    "type": "CHECKOUT",
+                    "language": "EN",
+                    "currency": "EUR",
+                    "page": "pim page",
+                    "pos": window._boxever_settings.pointOfSale,
+                    "browser_id": Boxever.getID(),
+                    "reference_id": "ABC123",
+                    "status": "PURCHASED"
+                };
+                Boxever.eventCreate(productCartToConfirm, function (data) { alert(JSON.stringify(data)); }, 'json');
+            });
+        }
+
+        function PaymentConfirmationFromCart() {
+            CreatingConsumerAndContacts();
+            _boxeverq.push(function () {
+                var productCartToConfirm = {
+                    "channel": "WEB",
+                    "type": "PAYMENT",
+                    "language": "EN",
+                    "currency": "EUR",
+                    "page": "pim page",
+                    "pos": window._boxever_settings.pointOfSale,
+                    "browser_id": Boxever.getID(),
+                    "pay_type": "Card"
+                };
+                Boxever.eventCreate(productCartToConfirm, function (data) { alert(JSON.stringify(data)); }, 'json');
+            });
+        }
+
+        function ConfirmProductInCart() {
+            _boxeverq.push(function () {
+                var productCartToConfirm = {
+                    "channel": "WEB",
+                    "type": "CONFIRM",
+                    "language": "EN",
+                    "currency": "GBP",
+                    "page": "pim page",
+                    "pos": window._boxever_settings.pointOfSale,
+                    "browser_id": Boxever.getID(),
+                    "product": [
+                        {
+                            "item_id": "Introduction to Cosmology"
+                        }, {
+                            "item_id": "Interstellar"
+                        }
+                    ]
+                };
+                Boxever.eventCreate(productCartToConfirm, function (data) { alert(JSON.stringify(data)); }, 'json');
+            });
+        }
+
+        function addProductToCartInCDP() {
+            var productName = document.getElementById("ProductTitle").value;
+            _boxeverq.push(function () {
+                var productCartToAdd = {
+                    "channel": "WEB",
+                    "type": "ADD",
+                    "language": "EN",
+                    "currency": "GBP",
+                    "page": "pim page",
+                    "pos": window._boxever_settings.pointOfSale,
+                    "browser_id": Boxever.getID(),
+                    "product": {
+                        "type": "BOOK",
+                        "item_id": productName,
+                        "name": productName,
+                        "currency": "GBP",
+                        "price": 10,
+                        "product_id": "Bag20",
+                        "quantity": 1,
+                        "linked_consumer_reference_ids": ["CONSUMER_1", "CONSUMER_2"]
+                    }
+                }
+                Boxever.eventCreate(productCartToAdd, function (data) { alert(JSON.stringify(data)); }, 'json');
+            });
+        }
 
         function sendDataToBoxever(eventType) {
             var eventToSent = {
@@ -545,8 +732,8 @@
                 "country": country,
                 "postal_code": postalcode,
                 "identifiers": [{
-                    "provider": "BXLP",
-                    "id": "123456"
+                    "provider": "email",
+                    "id": email
                 }]
             };
             Boxever.eventCreate(eventToSendRevised, function (data) { }, 'json');

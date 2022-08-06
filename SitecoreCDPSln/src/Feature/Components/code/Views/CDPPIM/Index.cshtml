@@ -1,0 +1,16 @@
+﻿<br />
+<br />
+<button id="btnConfirmProductInCart" type="button" class="btn btn-info">Cart Confirmed</button>
+<div class="card" style="width: 18rem;">
+    @Html.Sitecore().Field("image")
+    <div class="card-body">
+        <h5 class="card-title"><input type="text" id="ProductTitle" value='@Html.Sitecore().Field("name")' /></h5>
+        <p class="card-text">@Html.Sitecore().Field("description")</p>
+        <button id="btnAddProductToCart" type="button" class="btn btn-primary">Add to Cart</button>
+    </div>
+</div>
+<button id="btnMakePayment" type="button" class="btn btn-success">Pay</button>
+<button id="btnCheckOutAfterPayment" type="button" class="btn btn-success">Purchased</button>
+<br/>
+<br/>
+<button id="btnCheckOfferForGuest" type="button" class="btn btn-secondary">Check any offer available</button>

@@ -1,0 +1,40 @@
+﻿---
+ID: "4b44ea23-138c-4ce3-9c89-0bf1486b5122"
+Parent: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: /sitecore/templates/Project/sitecorecdp/pim/__Standard Values
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{FBEE9FC8-9CD8-42EC-B04B-6C7A17B574C6}">
+        <r
+          id="{E89188B6-C05E-4BF4-A484-F8C6124342CF}"
+          ph="cdp-main"
+          uid="{6EC2AAB8-8B06-4E60-AA5E-C16E74DD4DD1}" />
+        <r
+          id="{F9C731B2-9562-4BDA-9053-8DC9BC337DA2}"
+          ph="cdp-main"
+          uid="{C0A5A8A2-DACA-45BE-AE75-8767CB8A9354}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220806T062726Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: $name

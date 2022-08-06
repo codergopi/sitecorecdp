@@ -4,6 +4,11 @@ Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
 Template: "2fcdc739-f535-40cb-af2b-c7edd0b0ddc5"
 Path: "/sitecore/content/sitecorecdp/home/products/product-1"
 DB: master
+SharedFields:
+- ID: "9135200a-5626-4dd8-ab9d-d665b8c11748"
+  Hint: __Never publish
+  Type: checkbox
+  Value: 1
 Languages:
 - Language: en
   Fields:

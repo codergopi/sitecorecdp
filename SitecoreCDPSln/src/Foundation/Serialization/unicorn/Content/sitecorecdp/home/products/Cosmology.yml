@@ -1,0 +1,33 @@
+﻿---
+ID: "5b275e51-af56-4895-b543-622ce96b3abd"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: /sitecore/content/sitecorecdp/home/products/Cosmology
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: "This second edition of Introduction to Cosmology is an exciting update of an award-winning textbook. It is aimed primarily at advanced undergraduate students in physics and astronomy, but is also useful as a supplementary text at higher levels."
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220806T063402Z
+    - ID: "571c9868-6916-454e-bb7d-f6439054ef30"
+      Hint: image
+      Value: |
+        <image mediaid="{BFEDC78A-C51E-46CB-823D-68ACEFE79077}" />
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: cosmology
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: Introduction to Cosmology
+    - ID: "b5ae831c-65e0-41ae-93a8-edbe168ca06a"
+      Hint: type
+      Value: BOOK
+    - ID: "e4264c98-be78-4f71-b858-a6be64716b59"
+      Hint: currency
+      Value: GBP
