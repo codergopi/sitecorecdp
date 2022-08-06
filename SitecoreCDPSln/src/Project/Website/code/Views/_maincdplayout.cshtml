@@ -164,6 +164,21 @@
             $("#btnSubmitIdentityForm").click(function () {
                 submitIdentityToServer();
             });
+            $("#btnAddToCart").click(function () {
+                addEventForAccilaryProduct();
+                        });
+            $("#btnCheckOut").click(function () {
+                addEventForCheckoutSuccess();
+            });
+            $("#btnDeleteFromCart").click(function () {
+                addEventForClearCart();
+            });
+            $("#btnPaymentCompleted").click(function () {
+                addEventForPayment();
+            });
+            $("#btnOrderCompletion").click(function () {
+                addEventForOrderCompletion();
+            });
         });
 
         function sendDataToBoxever(eventType) {
@@ -250,6 +265,192 @@
 
             xmlHttp.send(null);
             alert(JSON.stringify(xmlHttp.responseText));
+        }
+
+        function addEventForFlight() {
+
+            var addFlightEvent = {
+                "channel": "WEB",
+                "type": "ADD",
+                "language": "EN",
+                "currency": "EUR",
+                "page": "itinerary page",
+                "pos": window._boxever_settings.pointOfSale,
+                "browser_id": Boxever.getID(),
+                "product": {
+                    "type": "FLIGHT",
+                    "item_id": "FLIGHT_1",
+                    "name": "DUB-LHR Economy Flight",
+                    "currency": "EUR",
+                    "price": 200,
+                    "product_id": "DUB-LHR|Economy|EconomyPlus",
+                    "origin": "DUB",
+                    "destination": "LHR",
+                    "flight_type": "OW",
+                    "pax_type": "ADT",
+                    "quantity": 1,
+                    "flight_segment": [{
+                        "origin": "DUB",
+                        "destination": "LHR",
+                        "departure_date_time": "2015-01-14T06:30",
+                        "arrival_date_time": "2015-01-14T07:50",
+                        "flight_number": "1000",
+                        "carrier": "SA",
+                        "fare_class": "Economy",
+                        "fare_family": "Economy Plus"
+                    }]
+                }
+            };
+
+            Boxever.eventCreate(addFlightEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
+        }
+
+        function addEventForAccilaryProduct() {
+
+            var addProductEvent = {
+                "channel": "WEB",
+                "type": "ADD",
+                "language": "EN",
+                "currency": "EUR",
+                "page": "passengers page",
+                "pos": window._boxever_settings.pointOfSale,
+                "browser_id": Boxever.getID(),
+                "product": {
+                    "type": "BAG",
+                    "item_id": "BAG_1",
+                    "name": "20kg Bag",
+                    "currency": "EUR",
+                    "price": 10,
+                    "product_id": "Bag20",
+                    "quantity": 1,
+                    "linked_consumer_reference_ids": ["CONSUMER_1", "CONSUMER_2"]
+                }
+            };
+
+            Boxever.eventCreate(addProductEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
+        }
+
+        function addBatchApiguestData() {
+
+            var addguestData = {
+                "channel": "WEB",
+                "type": "ADD",
+                "language": "EN",
+                "currency": "EUR",
+                "page": "passengers page",
+                "pos": window._boxever_settings.pointOfSale,
+                "browser_id": Boxever.getID(),
+                "product": {
+                    "type": "BAG",
+                    "item_id": "BAG_1",
+                    "name": "20kg Bag",
+                    "currency": "EUR",
+                    "price": 10,
+                    "product_id": "Bag20",
+                    "quantity": 1,
+                    "linked_consumer_reference_ids": ["CONSUMER_1", "CONSUMER_2"]
+                }
+            };
+
+            Boxever.eventCreate(addProductEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
+        }
+
+        function addEventForOrderCompletion() {
+
+            var addProductEvent = {
+                "type": "ORDER_CHECKOUT",
+                "browser_id": Boxever.getID(),
+                "channel": "WEB",
+                "pos": window._boxever_settings.pointOfSale,
+                "language": "EN",
+                "currency": "EUR",
+                "page": "checkout page",
+                "order": {
+                    "referenceId": "123456",
+                    "orderedAt": "2015-08-23T16:17:16.000Z",
+                    "status": "PURCHASED",
+                    "currencyCode": "EUR",
+                    "price": 200,
+                    "paymentType": "Card",
+                    "cardType": "Visa",
+                    "extensions": [
+                        {
+                            "name": "ext",
+                            "key": "default",
+                            "refundable": true
+                        }
+                    ],
+                    "orderItems": [
+                        {
+                            "type": "MOBILE_PHONE",
+                            "referenceId": "REF-123",
+                            "orderedAt": "2015-08-23T16:17:16.000Z",
+                            "status": "PURCHASED",
+                            "currencyCode": "EUR",
+                            "price": 200,
+                            "name": "Mobile phone of type x",
+                            "productId": "MOBILE_PHONE_TYPE_X",
+                            "quantity": 1,
+                            "extensions": [
+                                {
+                                    "name": "ext",
+                                    "key": "default",
+                                    "phoneColor": "Gold",
+                                    "insurance": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            };
+
+            Boxever.eventCreate(addProductEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
+        }
+
+        function addEventForPayment() {
+            var addPaymentEvent = {
+                "channel": "WEB",
+                "type": "PAYMENT",
+                "language": "EN",
+                "currency": "EUR",
+                "page": "home page",
+                "pos": window._boxever_settings.pointOfSale,
+                "browser_id": Boxever.getID(),
+                "pay_type": "Card"
+            };
+
+            Boxever.eventCreate(addPaymentEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
+        }
+
+
+        function addEventForClearCart() {
+            var addClearCartEvent = {
+                "channel": "WEB",
+                "type": "CLEAR_CART",
+                "language": "EN",
+                "currency": "EUR",
+                "page": "search result page",
+                "pos": window._boxever_settings.pointOfSale,
+                "browser_id": Boxever.getID()
+            };
+
+            Boxever.eventCreate(addClearCartEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
+        }
+
+        function addEventForCheckoutSuccess() {
+            var addCheckOutEvent = {
+                "channel": "WEB",
+                "type": "CHECKOUT",
+                "language": "EN",
+                "currency": "EUR",
+                "page": "home page",
+                "pos": window._boxever_settings.pointOfSale,
+                "browser_id": Boxever.getID(),
+                "reference_id": "ABC123",
+                "status": "PURCHASED"
+            };
+
+            Boxever.eventCreate(addCheckOutEvent, function (data) { alert(JSON.stringify(data)); }, 'json');
         }
 
         //==================== Expereinces =============================
