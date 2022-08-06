@@ -273,6 +273,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\SitecoreCdp\SitecoreCDP.Project.Website.SiteDefinition.config" />
+    <Content Include="CDPScripting\APIForFullStackExperience.js" />
+    <Content Include="CDPScripting\AudienceFiltering.js" />
+    <Content Include="CDPScripting\GuestPurchaseStatus.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
