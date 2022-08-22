@@ -6,6 +6,10 @@ Path: "/sitecore/content/sitecorecdp/home/approach-beginning/overview-sitecore-c
 DB: master
 Languages:
 - Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: CDP Overview
   Versions:
   - Version: 1
     Fields:
@@ -13,7 +17,8 @@ Languages:
       Hint: heading
       Value: "Customer Data Platform - Overview"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Value: "20220804T121418:637952120580660701Z"
+      Hint: __Created
+      Value: 20220804T073723Z
     - ID: "274023cf-173e-4560-b57f-acd42cc9295b"
       Hint: content
       Value: |

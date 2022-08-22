@@ -1,0 +1,18 @@
+﻿---
+ID: "cc0961a0-84eb-5694-896d-5087a7a54447"
+Parent: "b0cc8fa1-6b7f-5ef3-b064-8e44c45f4962"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/bootcampjssapp/data/media/img
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220624T113755Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport

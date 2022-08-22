@@ -1,0 +1,16 @@
+﻿@model SitecoreCDP.Feature.Components.Models.ProductCard
+<div class="card" style="padding: 5px; width: 100%;">
+    @Model.ProdImage
+    <div class="card-body">
+        <h5 class="card-title">@Model.ProdTitle</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="@Model.ProdUrl" class="btn btn-primary">Go to the page</a>
+        @foreach (var tag in Model.ProdTags)
+        {
+
+        }
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+</div>

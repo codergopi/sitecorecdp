@@ -1,0 +1,25 @@
+﻿---
+ID: "4d9b8705-450f-4bf0-baec-fc8295feaceb"
+Parent: "e0e68ff3-aea7-4fc9-b187-8108f834194e"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/approach-beginning/sending-order"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 500
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Sending Order to CDP
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: "sending-order"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220804T074019Z

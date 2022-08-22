@@ -1,0 +1,28 @@
+﻿---
+ID: "e4377e3c-8c32-43f2-8a6f-cb0bb2cd29c1"
+Parent: "af4d9fe1-3f27-4bc8-a132-a8a9ccea237e"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/Non-Fiction/in-cold-blood"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: In Cold Blood
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb"><p>NATIONAL BESTSELLER&nbsp;• The most famous true crime novel of all time “chills the blood and exercises the intelligence” (The New York Review of Books) — and haunted its author long after he finished writing it.</p><p> On November 15, 1959, in the small town of Holcomb, Kansas, four members of the Clutter family were savagely murdered by blasts from a shotgun held a few inches from their faces. There was no apparent motive for the crime, and there were almost no clues.&nbsp;</p><p> In one of the first non-fiction novels ever written,&nbsp;Truman Capote reconstructs the murder and the investigation that led to the capture, trial, and execution of the killers, generating both mesmerizing suspense and astonishing empathy. <cite>In Cold&nbsp;Blood</cite> is a work that transcends its moment, yielding poignant insights into the nature of American violence.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T170428Z
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "in-cold-blood"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: In Cold Blood

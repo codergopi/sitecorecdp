@@ -27,7 +27,10 @@ Languages:
       Value: Introduction to Cosmology
     - ID: "b5ae831c-65e0-41ae-93a8-edbe168ca06a"
       Hint: type
-      Value: BOOK
+      Type: Treelist
+      Value: |
+        {6F1ADCFD-F8D5-4D66-944C-BA2A3E93F82F}
+        {90A38F9A-D050-4749-8C4D-5127DFD50C5A}
     - ID: "e4264c98-be78-4f71-b858-a6be64716b59"
       Hint: currency
       Value: GBP

@@ -1,0 +1,21 @@
+﻿---
+ID: "af4d9fe1-3f27-4bc8-a132-a8a9ccea237e"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
+Path: "/sitecore/content/sitecorecdp/home/products/Non-Fiction"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1c9833a0-6960-483b-9a7e-04a23381b56b"
+      Hint: heading
+      Value: "Non-Fiction"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T165913Z

@@ -1,0 +1,39 @@
+﻿---
+ID: "c0e35d74-0f63-447c-a391-154a563d6c32"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/the-boardwalk-bookshop"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: The Boardwalk Bookshop
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb"><p><span class="is-mostly-caps">AN INSTANT NEW YORK TIMES AND USA TODAY BESTSELLER!</span></p><p><q>A book begging to be read on the beach, with the sun warming the sand and salt in the air: pure escapism.</q> — Kirkus </p><p>From #1 New York Times bestselling author Susan Mallery comes a book-about-books story of friends who become family, giving each other courage to start over.</p><p>When fate brings three strangers to a charming space for lease on the California coast, the Boardwalk Bookshop is born. Part bookstore, part gift shop, part bakery, it’s a dream come true for Bree, Mikki and Ashley. But while their business is thriving, their personal lives are...not.</p><p>Bree, wounded by brilliant but cold parents and her late husband’s ultimate betrayal, has sworn to protect her heart at all costs. Even from Ashley’s brother, a writer and adventurer who has inspired millions. He’s the first man to see past Bree’s barricades to her true self, which terrifies her. Mikki has this divorce thing all figured out — somehow, she’s stayed friends with her ex and her in-laws...until a new man changes how everyone looks at her, and how she sees herself. Meanwhile, Ashley discovers that the love of her life never intends to marry. Can she live without being a wife if it means she can have everything else she’s ever wanted?</p><p>At sunset every Friday on the beach in front of the Boardwalk Bookshop, the three friends share a champagne toast. As their bond grows closer, they challenge one another to become the best versions of themselves in this heartachingly beautiful story of friendship, sisterhood and the transformative power of love.</p><p>Don’t miss Home Sweet Christmas, a witty and heartfelt story of two friends who unexpectedly find the person-and the place in which-they belong this Christmas by #1 New York Times bestselling author Susan Mallery!</p><p /></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T112629Z
+    - ID: "571c9868-6916-454e-bb7d-f6439054ef30"
+      Hint: image
+      Value: |
+        <image mediaid="{157144C2-036D-4123-994A-4761EDE8CDDA}" />
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "the-boardwalk-bookshop"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: The Boardwalk Bookshop
+    - ID: "b5ae831c-65e0-41ae-93a8-edbe168ca06a"
+      Hint: type
+      Type: Treelist
+      Value: |
+        {6F1ADCFD-F8D5-4D66-944C-BA2A3E93F82F}
+        {D2F9399E-65BF-4B78-82DA-6471A91B136A}
+        {C080EEA0-76BA-4888-859C-A306F0FF6483}

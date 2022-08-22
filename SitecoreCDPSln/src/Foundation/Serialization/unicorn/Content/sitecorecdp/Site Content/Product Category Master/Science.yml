@@ -1,0 +1,21 @@
+﻿---
+ID: "6cb0fade-559a-48ae-8ae4-73cbcb86f94c"
+Parent: "e73cd891-c473-46b0-96dc-461cd1911ba1"
+Template: "042e4a9e-108e-4c9a-975d-90239b7977e9"
+Path: /sitecore/content/sitecorecdp/Site Content/Product Category Master/Science
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220810T053704Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "db5f7fae-0372-45b9-a7c3-ef641446bb79"
+      Hint: categoryName
+      Value: Science

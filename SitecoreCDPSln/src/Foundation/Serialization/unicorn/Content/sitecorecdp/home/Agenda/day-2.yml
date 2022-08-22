@@ -51,6 +51,3 @@ Languages:
       Hint: contentImage
       Value: |
         <image mediaid="{DDA1DF35-B800-45E4-A2BC-DC9D816A92BD}" />
-    - ID: "a0a4d9b7-2798-4f5c-93a8-bd661b2c1d01"
-      Hint: CodeDescTitle
-      Value: "codepage-2"

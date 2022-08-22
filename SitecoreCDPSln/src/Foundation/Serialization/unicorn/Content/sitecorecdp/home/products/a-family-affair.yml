@@ -1,0 +1,43 @@
+﻿---
+ID: "b242383f-16f2-44c5-b2c8-d643190f3101"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/a-family-affair"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: A Family Affair
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb">
+        <p>Life&rsquo;s biggest dilemmas can provide its sweetest rewards</p>
+        <p> Anna McNichol knows how to take charge. Raised by a single mother, she&rsquo;s worked to ensure her three children have every advantage she didn&rsquo;t. And while her marriage has its problems, she values commitment and believes in &ldquo;till death do us part.&rdquo; Now an empty nester, she&rsquo;s at the peak of her career and ready to seize the opportunity to focus on her future.</p>
+        <p> But life can change in an instant, and when her husband dies suddenly, Anna&rsquo;s carefully constructed world falls apart. The mysterious young woman at the memorial service confirms her husband had been keeping secrets, and Anna is determined to get to the truth.</p>
+        <p> For once, she doesn&rsquo;t have the answers. Her kids are struggling with their grief, her mother&rsquo;s health is in decline and Anna needs closure. Faced with one challenge after another, she finds support from an unexpected source. And as she puts her life back together, Anna realizes the McNichols may not be perfect but they&rsquo;ll always be family, and family is forever.</p>
+        <p>&nbsp;</p>
+        </div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T083851Z
+    - ID: "571c9868-6916-454e-bb7d-f6439054ef30"
+      Hint: image
+      Value: |
+        <image mediaid="{6D69ED8E-DA1E-4A1C-89A0-456B29658050}" />
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: A Family Affair
+    - ID: "b5ae831c-65e0-41ae-93a8-edbe168ca06a"
+      Hint: type
+      Type: Treelist
+      Value: |
+        {6F1ADCFD-F8D5-4D66-944C-BA2A3E93F82F}
+        {D2F9399E-65BF-4B78-82DA-6471A91B136A}
+        {C080EEA0-76BA-4888-859C-A306F0FF6483}
+        {042451FC-B10E-4A59-88E8-194F6440FF94}

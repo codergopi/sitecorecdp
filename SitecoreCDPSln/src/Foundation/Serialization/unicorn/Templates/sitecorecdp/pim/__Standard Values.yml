@@ -35,6 +35,19 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
+    - ID: "7e528dc1-1727-497a-ad27-7bc605e479ae"
+      Hint: price
+      Value: 1000
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: $name
     - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
       Hint: name
-      Value: $name
+      Value: 
+    - ID: "b5ae831c-65e0-41ae-93a8-edbe168ca06a"
+      Hint: type
+      Type: Treelist
+      Value: "{6F1ADCFD-F8D5-4D66-944C-BA2A3E93F82F}"
+    - ID: "e4264c98-be78-4f71-b858-a6be64716b59"
+      Hint: currency
+      Value: GBP

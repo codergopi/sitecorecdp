@@ -1,0 +1,28 @@
+﻿---
+ID: "9524ef26-23c6-427d-9652-2d77312959f1"
+Parent: "af4d9fe1-3f27-4bc8-a132-a8a9ccea237e"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/Non-Fiction/atomic-habits"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Atomic Habits
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb"><p><span class="is-mostly-caps">THE PHENOMENAL INTERNATIONAL BESTSELLER: 1 MILLION COPIES SOLD</span></p><p>Transform your life with tiny changes in behaviour, starting now.</p><p>People think that when you want to change your life, you need to think big. But world-renowned habits expert James Clear has discovered another way. He knows that real change comes from the compound effect of hundreds of small decisions: doing two push-ups a day, waking up five minutes early, or holding a single short phone call.</p><p>He calls them atomic habits.</p><p>In this ground-breaking book, Clears reveals exactly how these minuscule changes can grow into such life-altering outcomes. He uncovers a handful of simple life hacks (the forgotten art of Habit Stacking, the unexpected power of the Two Minute Rule, or the trick to entering the Goldilocks Zone), and delves into cutting-edge psychology and neuroscience to explain why they matter. Along the way, he tells inspiring stories of Olympic gold medalists, leading CEOs, and distinguished scientists who have used the science of tiny habits to stay productive, motivated, and happy. </p><p>These small changes will have a revolutionary effect on your career, your relationships, and your life.</p><p>________________________________</p><p><span class="is-mostly-caps">A NEW YORK TIMES AND SUNDAY TIMES BESTSELLER</span></p><p>‘A supremely practical and useful book.’ Mark Manson, author of The Subtle Art of Not Giving A F*ck</p><p>‘James Clear has spent years honing the art and studying the science of habits. This engaging, hands-on book is the guide you need to break bad routines and make good ones.’ Adam Grant, author of Originals</p><p>‘<cite>Atomic&nbsp;Habits</cite> is a step-by-step manual for changing routines.’ Books of the Month, Financial Times</p><p>‘A special book that will change how you approach your day and live your life.’ Ryan Holiday, author of The Obstacle is the Way</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T170041Z
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "atomic-habits"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: Atomic Habits

@@ -1,0 +1,28 @@
+﻿---
+ID: "6a9e47cc-703e-4354-9add-f6d592fae227"
+Parent: "af4d9fe1-3f27-4bc8-a132-a8a9ccea237e"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/Non-Fiction/cant-hurt-me"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Can't Hurt Me
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb"><p>New York Times Bestseller</p><p>Over 3 million copies sold</p><p>For David Goggins, childhood was a nightmare - poverty, prejudice, and physical abuse colored his days and haunted his nights. But through self-discipline, mental toughness, and hard work, Goggins transformed himself from a depressed, overweight young man with no future into a U.S. Armed Forces icon and one of the world’s top endurance athletes. The only man in history to complete elite training as a Navy SEAL, Army Ranger, and Air Force Tactical Air Controller, he went on to set records in numerous endurance events, inspiring Outside magazine to name him The Fittest (Real) Man in America. </p><p>In Can’t Hurt Me, he shares his astonishing life story and reveals that most of us tap into only 40% of our capabilities. Goggins calls this The 40% Rule, and his story illuminates a path that anyone can follow to push past pain, demolish fear, and reach their full potential.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T170155Z
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "cant-hurt-me"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: Can't Hurt Me

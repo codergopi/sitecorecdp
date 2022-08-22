@@ -1,0 +1,41 @@
+﻿---
+ID: "839e6ce0-38d4-40cd-8bdc-835f848da2a8"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/pride-prejudice"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Pride and Prejudice
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb">
+        <p><cite>Pride and&nbsp;Prejudice</cite> is one of the most beloved novels of all time. Elizabeth Bennett, the book&rsquo;s poverty-bound heroine has charmed readers with her wit and sincerity since the book was first published in 1813.  Its hero, the handsome and wealthy Mr. Darcy, infuriates Elizabeth &mdash; and women readers around the world &mdash; with his rude arrogance, but all fall in love with him anyway.</p>
+        <p>A comedy of manners, romance, and neighborhood drama &mdash; it&rsquo;s all there and more.  </p>
+        </div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T112807Z
+    - ID: "571c9868-6916-454e-bb7d-f6439054ef30"
+      Hint: image
+      Value: |
+        <image mediaid="{8283B140-07D6-452D-A798-F692AED46318}" />
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "pride-prejudice"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: Pride and Prejudice
+    - ID: "b5ae831c-65e0-41ae-93a8-edbe168ca06a"
+      Hint: type
+      Type: Treelist
+      Value: |
+        {6F1ADCFD-F8D5-4D66-944C-BA2A3E93F82F}
+        {D2F9399E-65BF-4B78-82DA-6471A91B136A}

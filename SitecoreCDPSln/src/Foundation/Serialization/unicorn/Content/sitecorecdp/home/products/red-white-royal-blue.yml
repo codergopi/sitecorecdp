@@ -1,0 +1,67 @@
+﻿---
+ID: "63ab0106-b849-45d7-a732-d26d45d65a53"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/red-white-royal-blue"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Red, White Royal Blue
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-content-struts screen-title-details-struts">
+        <div class="screen-title-details-jacket">
+        <div class="cover-box data-format_book is-loaded" style="--c-h-cover:350; --c-s-cover:78%; --c-l-cover:80%; --c-hsla-cover:hsla(350,78%,80%,1); --c-h-cover--contrast:0; --c-s-cover--contrast:0%; --c-l-cover--contrast:0%; --c-hsla-cover--contrast:hsla(0,0%,0%,1); --c-h-cover--min-30--max-50:343; --c-s-cover--min-30--max-50:69%; --c-l-cover--min-30--max-50:53%; --c-hsla-cover--min-30--max-50:hsla(343,69%,53%,1); --c-h-cover--min-30--max-70:349; --c-s-cover--min-30--max-70:79%; --c-l-cover--min-30--max-70:75%; --c-hsla-cover--min-30--max-70:hsla(349,79%,75%,1);">
+        <div id="cover-box-press-0026" class="cover-box-press">
+        <div class="cover-box-clip">
+        <h1>Red, White &amp; Royal Blue</h1>
+        </div>
+        </div>
+        </div>
+        <div class="screen-title-details-under-cover">
+        <div class="title-details-actions data-title_4347904"><button class="title-details-actions-status halo" type="button" role="button"></button>* Instant NEW YORK TIMES and USA TODAY bestseller *</div>
+        <p><span class="is-mostly-caps">* GOODREADS CHOICE AWARD WINNER for BEST DEBUT and BEST ROMANCE of 2019 *</span></p>
+        <p><span class="is-mostly-caps">* BEST BOOK OF THE YEAR* for VOGUE, NPR, VANITY FAIR, and more! *</span></p>
+        <p>What happens when America&rsquo;s First Son falls in love with the Prince of Wales?</p>
+        <p>When his mother became President, Alex Claremont-Diaz was promptly cast as the American equivalent of a young royal. Handsome, charismatic, genius &mdash; his image is pure millennial-marketing gold for the White House. There&rsquo;s only one problem: Alex has a beef with the actual prince, Henry, across the pond. And when the tabloids get hold of a photo involving an Alex-Henry altercation, U.S./British relations take a turn for the worse. </p>
+        <p>Heads of family, state, and other handlers devise a plan for damage control: staging a truce between the two rivals. What at first begins as a fake, Instragramable friendship grows deeper, and more dangerous, than either Alex or Henry could have imagined. Soon Alex finds himself hurtling into a secret romance with a surprisingly unstuffy Henry that could derail the campaign and upend two nations and begs the question: Can love save the world after all? Where do we find the courage, and the power, to be the people we are meant to be? And how can we learn to let our true colors shine through? Casey McQuiston&rsquo;s <cite>Red, White &amp; Royal&nbsp;Blue</cite> proves: true love isn&rsquo;t always diplomatic. </p>
+        <p><q>I took this with me wherever I went and stole every second I had to read! Absorbing, hilarious, tender, sexy &mdash; this book had everything I crave. I&rsquo;m jealous of all the readers out there who still get to experience <cite>Red, White &amp; Royal&nbsp;Blue</cite> for the first time!</q> - Christina Lauren, New York Times bestselling author of The Unhoneymooners</p>
+        <p><q><cite>Red, White &amp; Royal&nbsp;Blue</cite> is outrageously fun. It is romantic, sexy, witty, and thrilling. I loved every second.</q> - Taylor Jenkins Reid, New York Times bestselling author of Daisy Jones &amp; The Six</p>
+        </div>
+        </div>
+        <div class="screen-title-details-flap">
+        <div class="screen-title-details-reviews">
+        &nbsp;</div>
+        <div class="screen-title-details-awards">
+        </div>
+        </div>
+        </div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T080509Z
+    - ID: "571c9868-6916-454e-bb7d-f6439054ef30"
+      Hint: image
+      Value: |
+        <image mediaid="{2DD0E371-1339-4FCA-B8DC-72580E1D858A}" />
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "red-white-royal-blue"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: Red, White & Royal Blue
+    - ID: "b5ae831c-65e0-41ae-93a8-edbe168ca06a"
+      Hint: type
+      Type: Treelist
+      Value: |
+        {D2F9399E-65BF-4B78-82DA-6471A91B136A}
+        {6F1ADCFD-F8D5-4D66-944C-BA2A3E93F82F}
+    - ID: "e4264c98-be78-4f71-b858-a6be64716b59"
+      Hint: currency
+      Value: GBP

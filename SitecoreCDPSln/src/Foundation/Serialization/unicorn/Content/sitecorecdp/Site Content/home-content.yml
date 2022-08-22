@@ -1,8 +1,8 @@
 ﻿---
 ID: "9c5f6bbb-98f6-401c-b8df-b7fbcaa954d1"
-Parent: "e40c947d-0116-4349-affa-7d9d1f3ede45"
+Parent: "ae97d14b-9bea-407f-97c3-2096f32fef26"
 Template: "4eee653b-2d07-439e-8358-1da97c3895cb"
-Path: "/sitecore/content/sitecorecdp/home-content"
+Path: "/sitecore/content/sitecorecdp/Site Content/home-content"
 DB: master
 Languages:
 - Language: en

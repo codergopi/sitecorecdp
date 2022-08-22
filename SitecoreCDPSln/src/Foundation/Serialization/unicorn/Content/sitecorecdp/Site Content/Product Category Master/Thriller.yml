@@ -1,0 +1,17 @@
+﻿---
+ID: "682a0ee0-00d6-4ccb-bca3-5b0f703ecc17"
+Parent: "e73cd891-c473-46b0-96dc-461cd1911ba1"
+Template: "042e4a9e-108e-4c9a-975d-90239b7977e9"
+Path: /sitecore/content/sitecorecdp/Site Content/Product Category Master/Thriller
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220810T054433Z
+    - ID: "db5f7fae-0372-45b9-a7c3-ef641446bb79"
+      Hint: categoryName
+      Value: Thriller

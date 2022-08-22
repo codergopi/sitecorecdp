@@ -274,6 +274,7 @@
     <Compile Include="Controllers\CDPNavigationController.cs" />
     <Compile Include="Controllers\CDPPersonProfileController.cs" />
     <Compile Include="Controllers\CDPPIMController.cs" />
+    <Compile Include="Controllers\CDPTeaserController.cs" />
     <Compile Include="Controllers\CodeContentController.cs" />
     <Compile Include="Controllers\CodePageController.cs" />
     <Compile Include="Controllers\HomeHeroController.cs" />
@@ -281,6 +282,7 @@
     <Compile Include="Controllers\TabContentController.cs" />
     <Compile Include="Models\MainLink.cs" />
     <Compile Include="Models\MainNavigationModel.cs" />
+    <Compile Include="Models\ProductCard.cs" />
     <Compile Include="Models\SubLink.cs" />
     <Compile Include="Models\VisitorIdentity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -296,6 +298,8 @@
     <Content Include="Views\CDPPersonProfile\Index.cshtml" />
     <Content Include="Views\PurchasePath\Index.cshtml" />
     <Content Include="Views\CDPPIM\Index.cshtml" />
+    <Content Include="Views\CDPTeaser\Index.cshtml" />
+    <Content Include="Views\MultiColumnLayout.cshtml" />
     <None Include="Views\web.config" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">

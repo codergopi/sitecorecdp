@@ -1,0 +1,28 @@
+﻿---
+ID: "010c38f1-845e-442a-b73f-57c711d995f4"
+Parent: "af4d9fe1-3f27-4bc8-a132-a8a9ccea237e"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/Non-Fiction/astrophysics-for-people-in-a-hurry"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Astrophysics for People in a Hurry
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb"><p>What is the nature of space and time? How do we fit within the universe? How does the universe fit within us? There’s no better guide through these mindexpanding questions than acclaimed astrophysicist and bestselling author Neil deGrasse Tyson.</p><p>But today, few of us have time to contemplate the cosmos. So Tyson brings the universe down to Earth succinctly and clearly, with sparkling wit, in digestible chapters consumable anytime and anywhere in your busy day.</p><p>While waiting for your morning coffee to brew, or while waiting for the bus, the train, or the plane to arrive, <cite>Astrophysics for People in a&nbsp;Hurry</cite> will reveal just what you need to be fluent and ready for the next cosmic headlines: from the Big Bang to black holes, from quarks to quantum mechanics, and from the search for planets to the search for life in the universe.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T165929Z
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "astrophysics-for-people-in-a-hurry"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: Astrophysics for People in a Hurry

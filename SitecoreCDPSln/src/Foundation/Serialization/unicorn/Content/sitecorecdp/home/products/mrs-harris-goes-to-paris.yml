@@ -1,0 +1,32 @@
+﻿---
+ID: "86fd77b3-3689-4687-8ee9-63295918282f"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/mrs-harris-goes-to-paris"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Mrs Harris Goes to Paris & Mrs Harris Goes to New York
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb"><p>COMING IN 2022 - the feel-good classic will be a major film, starring Leslie Manville, Isabelle Huppert, Jason Isaacs and Lucas Bravo</p><p>‘Mrs Harris is one of the great creations of fiction - so real that you feel you know her, yet truly magical as well. I can never have enough of her’ Justine Picardie</p><p>'It is almost impossible not to succumb to Gallico’s spell’Times Literary Supplement</p><p>Mrs Harris is a salt-of-the-earth London charlady who cheerfully cleans the houses of the rich. One day, when tidying Lady Dant’s wardrobe, she comes across the most beautiful thing she has ever seen in her life - a Dior dress. In all the years of her drab and humble existence, she’s never seen anything as magical as the dress before her and she’s never wanted anything as much before. Determined to make her dream come true, Mrs Harris scrimps, saves and slaves away until one day, after three long, uncomplaining years, she finally has enough money to go to Paris.</p><p>When she arrives at the House of Dior, Mrs Harris has little idea of how her life is about to be turned upside down and how many other lives she will transform forever. Always kind, always cheery and always winsome, the indomitable Mrs Harris takes Paris by storm and learns one of life’s greatest lessons along the way.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T105704Z
+    - ID: "571c9868-6916-454e-bb7d-f6439054ef30"
+      Hint: image
+      Value: |
+        <image mediaid="{72F3B74F-A35B-43C8-A42C-D46606DE86D2}" />
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "mrs-harris-goes-to-paris"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: Mrs Harris Goes to Paris & Mrs Harris Goes to New York

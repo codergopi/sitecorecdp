@@ -1,0 +1,32 @@
+﻿---
+ID: "7c92ca37-e974-44d9-9ace-dca2a52f14f5"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/the-overnight-guest"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: The Overnight Guest
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb"><p><span class="is-mostly-caps">NEW YORK TIMES BESTSELLER</span></p><p><q>Fully realized, wholly absorbing and almost painfully suspenseful...The journey is mesmerizing.</q> — New York Times</p><p>A woman receives an unexpected visitor during a deadly snowstorm in this chilling thriller from New York Times bestselling author Heather Gudenkauf.</p><p>True crime writer Wylie Lark doesn’t mind being snowed in at the isolated farmhouse where she’s retreated to write her new book. A cozy fire, complete silence. It would be perfect, if not for the fact that decades earlier, at this very house, two people were murdered in cold blood and a girl disappeared without a trace.</p><p>As the storm worsens, Wylie finds herself trapped inside the house, haunted by the secrets contained within its walls — haunted by secrets of her own. Then she discovers a small child in the snow just outside. After bringing the child inside for warmth and safety, she begins to search for answers. But soon it becomes clear that the farmhouse isn’t as isolated as she thought, and someone is willing to do anything to find them.</p><p>And don’t miss these other great stories by Heather!</p><p>The Weight of Silence</p><p>These Things Hidden</p><p>Little Mercies</p><p>MIssing Pieces</p><p>Not a Sound</p><p>Before She Was Found</p><p>This is How I Lied </p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T111839Z
+    - ID: "571c9868-6916-454e-bb7d-f6439054ef30"
+      Hint: image
+      Value: |
+        <image mediaid="{25D12BD8-A98A-4EAD-9FD9-F120FE1F8C01}" />
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "the-overnight-guest"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: The Overnight Guest

@@ -1,0 +1,39 @@
+﻿---
+ID: "57e533ec-336a-4d30-93b2-e1807fa88024"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/the-war-of-two-queens"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: The War of Two Queens
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb"><p>War is only the beginning… </p><p>From #1 New York Times bestselling author Jennifer L. Armentrout comes book four in her Blood and Ash series.</p><p>From the desperation of golden crowns… </p><p>Casteel Da’Neer knows all too well that very few are as cunning or vicious as the Blood Queen, but no one, not even him, could’ve prepared for the staggering revelations. The magnitude of what the Blood Queen has done is almost unthinkable.</p><p>And born of mortal flesh… </p><p>Nothing will stop Poppy from freeing her King and destroying everything the Blood Crown stands for. With the strength of the Primal of Life’s guards behind her, and the support of the wolven, Poppy must convince the Atlantian generals to make war her way — because there can be no retreat this time. Not if she has any hope of building a future where both kingdoms can reside in peace.</p><p>A great primal power rises… </p><p>Together, Poppy and Casteel must embrace traditions old and new to safeguard those they hold dear — to protect those who cannot defend themselves. But war is only the beginning. Ancient primal powers have already stirred, revealing the horror of what began eons ago. To end what the Blood Queen has begun, Poppy might have to become what she has been prophesied to be — what she fears the most.</p><p>As the Harbinger of Death and Destruction.</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T110049Z
+    - ID: "571c9868-6916-454e-bb7d-f6439054ef30"
+      Hint: image
+      Value: |
+        <image mediaid="{6DAA1E0D-235D-4660-96B0-2313721FB391}" />
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "the-war-of-two-queens"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: The War of Two Queens
+    - ID: "b5ae831c-65e0-41ae-93a8-edbe168ca06a"
+      Hint: type
+      Type: Treelist
+      Value: |
+        {6F1ADCFD-F8D5-4D66-944C-BA2A3E93F82F}
+        {D2F9399E-65BF-4B78-82DA-6471A91B136A}
+        {042451FC-B10E-4A59-88E8-194F6440FF94}

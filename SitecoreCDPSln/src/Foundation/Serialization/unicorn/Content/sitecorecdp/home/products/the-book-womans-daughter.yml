@@ -1,0 +1,40 @@
+﻿---
+ID: "3cd3a223-a63b-4f60-8670-2b568d0980b7"
+Parent: "2766bcbf-7430-4b66-8fc0-d1646e11b14c"
+Template: "53e0bcc1-c1ad-4531-8562-7e1a831f00fa"
+Path: "/sitecore/content/sitecorecdp/home/products/the-book-womans-daughter"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: The Book Woman's Daughter
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "085486cc-cc28-4dec-bd12-ca3d6a7bc9cd"
+      Hint: description
+      Value: |
+        <div class="screen-title-details-blurb"><p><span class="is-mostly-caps">THE INSTANT NEW YORK TIMES BESTSELLER!</span></p><p><q>A powerful portrait of the courageous women who fought against ignorance, misogyny, and racial prejudice.</q> — William Kent Krueger, New York Times bestselling author of This Tender Land and Lightning Strike</p><p>The new novel from the New York Times bestselling author of The Book Woman of Troublesome Creek!</p><p>Bestselling historical fiction author Kim Michele Richardson is back with the perfect book club read following Honey Lovett, the daughter of the beloved Troublesome book woman, who must fight for her own independence with the help of the women who guide her and the books that set her free.</p><p>In the ruggedness of the beautiful Kentucky mountains, Honey Lovett has always known that the old ways can make a hard life harder. As the daughter of the famed blue-skinned, Troublesome Creek packhorse librarian, Honey and her family have been hiding from the law all her life. But when her mother and father are imprisoned, Honey realizes she must fight to stay free, or risk being sent away for good.</p><p>Picking up her mother’s old packhorse library route, Honey begins to deliver books to the remote hollers of Appalachia. Honey is looking to prove that she doesn’t need anyone telling her how to survive. But the route can be treacherous, and some folks aren’t as keen to let a woman pave her own way.</p><p>If Honey wants to bring the freedom books provide to the families who need it most, she’s going to have to fight for her place, and along the way, learn that the extraordinary women who run the hills and hollers can make all the difference in the world.</p><p>Praise for The Book Woman’s Daughter:</p><p><q>In Kim Michele Richardson’s beautifully and authentically rendered The Book Woman’s Daughter she once again paints a stunning portrait of the raw, somber beauty of Appalachia, the strong resolve of remarkable women living in a world dominated by men, and the power of books and sisterhood to prevail in the harshest circumstances. A critical and profoundly important read for our time. Badassery womanhood at its best!</q> — Sara Gruen, #1 New York Times bestselling author of Water for Elephants</p><p><q>Fierce, beautiful and inspirational, Kim Michele Richardson has created a powerful tale about brave extraordinary heroines who are downright haunting and unforgettable.</q> — Abbott Kahler, New York Times bestselling author (as Karen Abbott) of The Ghosts of Eden Park</p></div>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220821T111950Z
+    - ID: "571c9868-6916-454e-bb7d-f6439054ef30"
+      Hint: image
+      Value: |
+        <image mediaid="{35826202-6955-4C5E-B792-4B974D72BB39}" />
+    - ID: "872bd786-0ca7-40fd-92cf-77a52ba82ee4"
+      Hint: product_id
+      Value: "the-book-womans-daughter"
+    - ID: "a1de9368-5dff-471c-a599-84fe5a5eeed8"
+      Hint: name
+      Value: The Book Woman's Daughter
+    - ID: "b5ae831c-65e0-41ae-93a8-edbe168ca06a"
+      Hint: type
+      Type: Treelist
+      Value: |
+        {6F1ADCFD-F8D5-4D66-944C-BA2A3E93F82F}
+        {D2F9399E-65BF-4B78-82DA-6471A91B136A}
+        {C080EEA0-76BA-4888-859C-A306F0FF6483}
+        {7DB19F90-0B77-4BC4-A889-476E2B40A9DC}
