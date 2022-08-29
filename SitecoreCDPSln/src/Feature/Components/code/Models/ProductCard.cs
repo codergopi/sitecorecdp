@@ -12,5 +12,7 @@ namespace SitecoreCDP.Feature.Components.Models
         public HtmlString ProdImage { get; set; }
         public List<string> ProdTags { get; set; }
         public string LastUpdated { get; set; }
+
+        public string ProdShortDesc { get; set; }
     }
 }

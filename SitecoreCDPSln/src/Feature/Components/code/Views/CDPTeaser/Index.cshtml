@@ -3,11 +3,11 @@
     @Model.ProdImage
     <div class="card-body">
         <h5 class="card-title">@Model.ProdTitle</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">@Model.ProdShortDesc</p>
         <a href="@Model.ProdUrl" class="btn btn-primary">Go to the page</a>
         @foreach (var tag in Model.ProdTags)
         {
-
+            <a href="#">@tag</a>
         }
     </div>
     <div class="card-footer">

@@ -19,14 +19,16 @@ namespace SitecoreCDP.Feature.Components.Controllers
             var renderingItem = RenderingContext.Current.Rendering.Item;
             MultilistField productTags = renderingItem.Fields["type"];
             var productTagsString = productTags.GetItems().Select(x => x.Name).ToList();
-            DateField updatedDateTime = renderingItem.Fields["__UpdatedDateTime"];
+            DateField updatedDateTime = renderingItem.Fields["__Updated"];
+            TextField description = renderingItem.Fields["description"];
 
             ProductCard productCard = new ProductCard
             {
-                ProdTitle = renderingItem.Fields["__DisplayName"].Value,
+                ProdTitle = renderingItem.Fields["__Display Name"].Value,
                 ProdUrl = LinkManager.GetItemUrl(renderingItem),
                 ProdImage = new HtmlString(FieldRenderer.Render(renderingItem, "image")),
                 ProdTags = productTagsString,
+                ProdShortDesc = description.Value
             };
 
             return View(productCard);
